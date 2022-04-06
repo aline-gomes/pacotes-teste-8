@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	font-family: 'Trebuchet MS';
+}
+
+.ia-container {
+    position: relative;
+    max-width: 900px;
+    max-height: 506px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+	background-color: #ffffff;
+}
+
+.ia-incont {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.label {
+	position: absolute;
+	width: 350px;
+	top: 11px;
+	text-align: center;
+	font-size: 28px;
+	color: #ffffff;
+}
+#label-0 {
+	left: 50px;
+}
+#label-1 {
+	left: 510px;
+}
+
+.set {
+	position: absolute;
+}
+#set-0 {
+	width: 360px;
+	height: 120px;
+	left: 45px;
+	top: 356px;
+}
+#set-1 {
+	width: 360px;
+	height: 120px;
+	left: 505px;
+	top: 356px;
+}
+
+.button {
+	position: relative;
+	float: left;
+	font-size: 18px;
+	padding: 4px 5px;
+	color: #595B68;
+	cursor: pointer;
+}
+.button-on {
+	cursor: auto;
+	opacity: 0;
+}
+
+.button-cover {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.button-reset {
+	position: absolute;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	left: 425px;
+	top: 436px;
+	background: url('./images/reset_1.png');
+}
+.button-reset-on {
+	background: url('./images/reset_click.png');
+}

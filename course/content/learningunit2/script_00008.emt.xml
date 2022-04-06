@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.188" gtm="true" identifer="Lesson 8 – Who&amp;apos;s that person?" playerVersion="1.8.0" title="Who&amp;apos;s that person?">
+				
+		<testView href="common/lesson.emp.xml"/>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<keyword><string>sweater</string></keyword>
+		<keyword><string>t-shirt</string></keyword>
+		<keyword><string>hat</string></keyword>
+		<keyword><string>secretary</string></keyword>
+		<keyword><string>dentist</string></keyword>
+		<keyword><string>engineer</string></keyword>
+		<keyword><string>lorry driver</string></keyword>
+		<keyword><string>fisherman</string></keyword>
+		<keyword><string>teacher</string></keyword>
+		<keyword><string>coach</string></keyword>
+		<keyword><string>do</string></keyword>
+		<keyword><string>are doing</string></keyword>
+		<title><string>Who's that person?</string></title>
+	</general>
+	<educational>
+		<description><string>Learning goals:
+1. Listening to a dialogue and understanding the main key information
+2. Using present simple and present continuous
+3. Recycling questions about what people do/are doing
+4. Recognising and producing the weak form of "a"/"an"</string></description>
+	</educational>
+</lom>
+	<styleDeclaration>
+		<link href="common/default.css" userAgent=".*"/>
+	</styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="page_toc" href="script_00008/script_00008_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="page_leadin_visited" href="script_00008/script_00008_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="page_maininput" href="script_00008/script_00008_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="page_practice" href="script_00008/script_00008_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="page_practice" href="script_00008/script_00008_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="page_practice" href="script_00008/script_00008_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="page_practice_visited" href="script_00008/script_00008_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="page_eta_visited" href="script_00008/script_00008_007.emp.xml" identifier="ITEM_007"/>
+			<assessmentItemRef class="page_report" href="script_00008/script_00008_008.emp.xml" identifier="ITEM_008"/>
+			<assessmentItemRef class="page_report" href="./newassets/script_1.emp.xml" identifier="ITEM_009"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

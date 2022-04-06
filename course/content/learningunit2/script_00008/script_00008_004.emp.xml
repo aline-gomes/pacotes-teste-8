@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.188" identifier="ITEM_004" playerVersion="1.8.0" timeDependent="false" title="Practice 2">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/android.css" userAgent=".*Android"/><link href="../common/ios.css" userAgent=".*iPad|.*iPhone"/><link href="../common/dialog.css" userAgent=".*"/><link href="../common/clouds.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>10</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_1">
+					<correctResponse>
+						<value forIndex="0">-1924273557</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_10-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_10-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_10-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_10">
+					<correctResponse>
+						<value forIndex="0">-903525734</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_2-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_2-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_2-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_2">
+					<correctResponse>
+						<value forIndex="0">101004554</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_3-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_3-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_3-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_3">
+					<correctResponse>
+						<value forIndex="0">-1323526103</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_4-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_4-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_4-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_4">
+					<correctResponse>
+						<value forIndex="0">1333464041</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_5-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_5-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_5">
+					<correctResponse>
+						<value forIndex="0">39477361</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_6-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_6-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_6">
+					<correctResponse>
+						<value forIndex="0">-1490531957</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_7-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_7-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_7">
+					<correctResponse>
+						<value forIndex="0">-684000691</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_8-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_8-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_8-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_8">
+					<correctResponse>
+						<value forIndex="0">99089197</value>
+					</correctResponse>
+				</responseDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-TODO"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_9-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DROP_RESPONSE_9-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="DROP_RESPONSE_9-MISTAKES"/>
+				<responseDeclaration cardinality="single" checkMode="default" countMode="single" identifier="DROP_RESPONSE_9">
+					<correctResponse>
+						<value forIndex="0">1958259306</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+		<div class="page-practice">	
+           	<div class="page-header">		
+				<div class="lesson-header-home-button"><shape class="home-button"/></div>
+				<div class="lesson-header-page-title"><info class="variable-page-title"/></div>
+	        	<div class="lesson-header-lesson-title"><info class="variable-lesson-title"/></div>		
+			</div>
+			<div class="page-content">	
+	            <group class="activity" id="dummy1">
+	<group class="rubric" id="dummy1_1">
+	<div class="rubric-cloud">
+				<audioPlayer class="player-normal" data="media/rub_y7_u08_p4_001au.mp3" id="dummy1_1_1">
+<source src="media/rub_y7_u08_p4_001au.mp3" type="audio/mp4"/>	</audioPlayer>
+				<simpleText class="question" id="dummy1_1_2">
+Listen and complete the sentences.</simpleText>
+			</div>
+</group>			
+<audioPlayer class="player_progress" data="media/y7_u08_p3_001au.mp3" id="dummy1_2">
+<source src="media/y7_u08_p3_001au.mp3" type="audio/mp4"/>		<template>
+		<div class="player player-progress">
+			<mediaPlayPauseButton id="mediaPlayPauseButton"/>
+			<mediaProgressBar id="mediaProgressBar"/>	
+			<mediaPositinInStream class="media-time" id="mediaPositinInStream"/>
+						
+		</div>
+		</template>
+	</audioPlayer>			
+<group class="grid_25x75" id="dummy1_3">
+	<div class="t25x75">
+		<div class="w100perc">	
+			<div class="w25perc">
+				<div class="inner">
+					<img class="colorline" fullscreenMode="magnific" id="dummy1_3_1" src="media/y7_u08_p2_001i.jpg" srcFullScreen="media/y7_u08_p2_001i_f.jpg">
+</img>
+				</div>	
+			</div>
+			<div class="w75perc">
+				<div class="inner">
+					<group class="dialog" id="dummy1_3_2">
+	<div class="dialog-main">
+		<group class="orange dialog-left" id="dummy1_3_2_1">
+	<group class="lt" id="dummy1_3_2_1_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_1_1_1">
+<span><b>William:</b> Where's this one, Harry?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_3_2_2">
+	<group class="rt" id="dummy1_3_2_2_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_2_1_1">
+<span><b>Harry:</b> That's in the park near our house.  We </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_1" shuffle="true">
+			<inlineChoice identifier="-1924273557">'re having</inlineChoice>
+			<inlineChoice identifier="3195240">have</inlineChoice>
+		</inlineChoiceInteraction><span> a picnic!</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_3_2_3">
+	<group class="lt" id="dummy1_3_2_3_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_3_1_1">
+<span><b>William:</b> The food looks great!  What is your mum drinking?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_3_2_4">
+	<group class="rt" id="dummy1_3_2_4_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_4_1_1">
+<span>Harry: She's drinking lemonade. She makes it herself and it's amazing!</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_3_2_5">
+	<group class="lt" id="dummy1_3_2_5_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_5_1_1">
+<span><b>William:</b> And is that your sister?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_3_2_6">
+	<group class="rt" id="dummy1_3_2_6_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_6_1_1">
+<span><b>Harry</b>: Yes it is, she loves texting, so she </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_2" shuffle="true">
+			<inlineChoice identifier="-1720673158">talks not</inlineChoice>
+			<inlineChoice identifier="101004554">doesn't talk</inlineChoice>
+		</inlineChoiceInteraction><span> much!  She always has her phone with her.</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_3_2_7">
+	<group class="lt" id="dummy1_3_2_7_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_7_1_1">
+<span><b>William:</b> And who is that man?  Is that your dad?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_3_2_8">
+	<group class="rt" id="dummy1_3_2_8_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_3_2_8_1_1">
+<span><b>Harry:</b> No it's not, that's my uncle. He is a lorry driver. We don't see him very often, because he </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_3" shuffle="true">
+			<inlineChoice identifier="997808849">is driving</inlineChoice>
+			<inlineChoice identifier="-1323526103">drives</inlineChoice>
+		</inlineChoiceInteraction><span> all over the country!</span></textInteraction>
+</group>
+</group>
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+		<!-- cannot find module for dummy 'dummy12'!-->
+		<!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+		<!-- cannot find module for dummy 'dummy15'!-->
+		<!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+		<!-- cannot find module for dummy 'dummy18'!-->
+		<!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+		<!-- cannot find module for dummy 'dummy21'!-->	
+		<!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+		<!-- cannot find module for dummy 'dummy24'!-->
+		<!-- cannot find module for dummy 'dummy25'!-->
+		<!-- cannot find module for dummy 'dummy26'!-->
+		<!-- cannot find module for dummy 'dummy27'!-->
+		<!-- cannot find module for dummy 'dummy28'!-->
+		<!-- cannot find module for dummy 'dummy29'!-->
+		<!-- cannot find module for dummy 'dummy30'!-->
+		<!-- cannot find module for dummy 'dummy31'!-->
+		<!-- cannot find module for dummy 'dummy32'!-->
+		<!-- cannot find module for dummy 'dummy33'!-->
+		<!-- cannot find module for dummy 'dummy34'!-->
+		<!-- cannot find module for dummy 'dummy35'!-->
+	</div>
+</group>
+				</div>	
+			</div>
+		</div>
+	</div>
+</group>			
+<group class="grid_25x75" id="dummy1_4">
+	<div class="t25x75">
+		<div class="w100perc">	
+			<div class="w25perc">
+				<div class="inner">
+					<img class="colorline" fullscreenMode="magnific" id="dummy1_4_1" src="media/y7_u08_p2_002i.jpg" srcFullScreen="media/y7_u08_p2_002i_f.jpg">
+</img>
+				</div>	
+			</div>
+			<div class="w75perc">
+				<div class="inner">
+					<group class="dialog" id="dummy1_4_2">
+	<div class="dialog-main">
+		<group class="orange dialog-left" id="dummy1_4_2_1">
+	<group class="lt" id="dummy1_4_2_1_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_4_2_1_1_1">
+<span><b>William:</b>  Wow, what a huge fish!</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_4_2_2">
+	<group class="rt" id="dummy1_4_2_2_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_4_2_2_1_1">
+<span><b>Harry:</b>  I know, it was so heavy!  That's my grandpa, and he is a fisherman.  Sometimes </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_4" shuffle="true">
+			<inlineChoice identifier="1333464041">he takes</inlineChoice>
+			<inlineChoice identifier="1242512343">he is taking</inlineChoice>
+		</inlineChoiceInteraction><span> me out in his boat to go fishing.</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_4_2_3">
+	<group class="lt" id="dummy1_4_2_3_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_4_2_3_1_1">
+<span><b>William</b>: What </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_5" shuffle="true">
+			<inlineChoice identifier="39477361">'s he</inlineChoice>
+			<inlineChoice identifier="99089197">he is</inlineChoice>
+		</inlineChoiceInteraction><span> looking at?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_4_2_4">
+	<group class="rt" id="dummy1_4_2_4_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_4_2_4_1_1">
+<span><b>Harry:</b>  My grandma – she </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_6" shuffle="true">
+			<inlineChoice identifier="-1490531957">'s saying</inlineChoice>
+			<inlineChoice identifier="3523048">says</inlineChoice>
+		</inlineChoiceInteraction><span> that his lunch is ready!</span></textInteraction>
+</group>
+</group>
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+		<!-- cannot find module for dummy 'dummy12'!-->
+		<!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+		<!-- cannot find module for dummy 'dummy15'!-->
+		<!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+		<!-- cannot find module for dummy 'dummy18'!-->
+		<!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+		<!-- cannot find module for dummy 'dummy21'!-->	
+		<!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+		<!-- cannot find module for dummy 'dummy24'!-->
+		<!-- cannot find module for dummy 'dummy25'!-->
+		<!-- cannot find module for dummy 'dummy26'!-->
+		<!-- cannot find module for dummy 'dummy27'!-->
+		<!-- cannot find module for dummy 'dummy28'!-->
+		<!-- cannot find module for dummy 'dummy29'!-->
+		<!-- cannot find module for dummy 'dummy30'!-->
+		<!-- cannot find module for dummy 'dummy31'!-->
+		<!-- cannot find module for dummy 'dummy32'!-->
+		<!-- cannot find module for dummy 'dummy33'!-->
+		<!-- cannot find module for dummy 'dummy34'!-->
+		<!-- cannot find module for dummy 'dummy35'!-->
+	</div>
+</group>
+				</div>	
+			</div>
+		</div>
+	</div>
+</group>			
+<group class="grid_25x75" id="dummy1_5">
+	<div class="t25x75">
+		<div class="w100perc">	
+			<div class="w25perc">
+				<div class="inner">
+					<img class="colorline" fullscreenMode="magnific" id="dummy1_5_1" src="media/y7_u08_p2_003i.jpg" srcFullScreen="media/y7_u08_p2_003i_f.jpg">
+</img>
+				</div>	
+			</div>
+			<div class="w75perc">
+				<div class="inner">
+					<group class="dialog" id="dummy1_5_2">
+	<div class="dialog-main">
+		<group class="green dialog-right" id="dummy1_5_2_1">
+	<group class="rt" id="dummy1_5_2_1_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_5_2_1_1_1">
+<span><b>Harry: </b> This is my football team.  We have a match every Tuesday night, but in this picture we </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_7" shuffle="true">
+			<inlineChoice identifier="-684000691">'re not</inlineChoice>
+			<inlineChoice identifier="95765936">don't</inlineChoice>
+		</inlineChoiceInteraction><span> playing a match.</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_5_2_2">
+	<group class="lt" id="dummy1_5_2_2_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_5_2_2_1_1">
+<span><b>William:</b>  Who's that man?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_5_2_3">
+	<group class="rt" id="dummy1_5_2_3_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_5_2_3_1_1">
+<span><b>Harry:</b>  That's David Smith, he's a famous footballer!  He plays for City!</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_5_2_4">
+	<group class="lt" id="dummy1_5_2_4_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_5_2_4_1_1">
+<span><b>William:</b> He's very tall, isn't he?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_5_2_5">
+	<group class="rt" id="dummy1_5_2_5_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_5_2_5_1_1">
+<span><b>Harry:</b>  Yes, </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_8" shuffle="true">
+			<inlineChoice identifier="3196649">he's</inlineChoice>
+			<inlineChoice identifier="99089197">he is</inlineChoice>
+		</inlineChoiceInteraction><span>!  He's very nice, and he's really good at football!</span></textInteraction>
+</group>
+</group>
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+		<!-- cannot find module for dummy 'dummy12'!-->
+		<!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+		<!-- cannot find module for dummy 'dummy15'!-->
+		<!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+		<!-- cannot find module for dummy 'dummy18'!-->
+		<!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+		<!-- cannot find module for dummy 'dummy21'!-->	
+		<!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+		<!-- cannot find module for dummy 'dummy24'!-->
+		<!-- cannot find module for dummy 'dummy25'!-->
+		<!-- cannot find module for dummy 'dummy26'!-->
+		<!-- cannot find module for dummy 'dummy27'!-->
+		<!-- cannot find module for dummy 'dummy28'!-->
+		<!-- cannot find module for dummy 'dummy29'!-->
+		<!-- cannot find module for dummy 'dummy30'!-->
+		<!-- cannot find module for dummy 'dummy31'!-->
+		<!-- cannot find module for dummy 'dummy32'!-->
+		<!-- cannot find module for dummy 'dummy33'!-->
+		<!-- cannot find module for dummy 'dummy34'!-->
+		<!-- cannot find module for dummy 'dummy35'!-->
+	</div>
+</group>
+				</div>	
+			</div>
+		</div>
+	</div>
+</group>			
+<group class="grid_25x75" id="dummy1_6">
+	<div class="t25x75">
+		<div class="w100perc">	
+			<div class="w25perc">
+				<div class="inner">
+					<img class="colorline" fullscreenMode="magnific" id="dummy1_6_1" src="media/y7_u08_p2_004i.jpg" srcFullScreen="media/y7_u08_p2_004i_f.jpg">
+</img>
+				</div>	
+			</div>
+			<div class="w75perc">
+				<div class="inner">
+					<group class="dialog" id="dummy1_6_2">
+	<div class="dialog-main">
+		<group class="green dialog-right" id="dummy1_6_2_1">
+	<group class="rt" id="dummy1_6_2_1_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_6_2_1_1_1">
+<span><b>Harry:</b> My sister loves dancing. She's showing us her new dance.</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_6_2_2">
+	<group class="lt" id="dummy1_6_2_2_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_6_2_2_1_1">
+<span><b>William:</b> It looks really cool!</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_6_2_3">
+	<group class="rt" id="dummy1_6_2_3_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_6_2_3_1_1">
+<span><b>Harry:</b> It's not cool, it's boring!</span></textInteraction>
+</group>
+</group>
+		<group class="orange dialog-left" id="dummy1_6_2_4">
+	<group class="lt" id="dummy1_6_2_4_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_6_2_4_1_1">
+<span><b>William:</b> </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_9" shuffle="true">
+			<inlineChoice identifier="1958259306">Is she dancing</inlineChoice>
+			<inlineChoice identifier="-461085622">She is dancing</inlineChoice>
+		</inlineChoiceInteraction><span> in your living room?</span></textInteraction>
+</group>
+</group>
+		<group class="green dialog-right" id="dummy1_6_2_5">
+	<group class="rt" id="dummy1_6_2_5_1">
+	<div class="tick"/>
+		<textInteraction id="dummy1_6_2_5_1_1">
+<span><b>Harry:</b> Yes, </span>		<inlineChoiceInteraction responseIdentifier="DROP_RESPONSE_10" shuffle="true">
+			<inlineChoice identifier="-903525734">she is</inlineChoice>
+			<inlineChoice identifier="109401564">she's</inlineChoice>
+		</inlineChoiceInteraction><span>. She comes in there and dances when I'm watching TV.  It's really annoying!</span></textInteraction>
+</group>
+</group>
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+		<!-- cannot find module for dummy 'dummy12'!-->
+		<!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+		<!-- cannot find module for dummy 'dummy15'!-->
+		<!-- cannot find module for dummy 'dummy16'!-->
+		<!-- cannot find module for dummy 'dummy17'!-->
+		<!-- cannot find module for dummy 'dummy18'!-->
+		<!-- cannot find module for dummy 'dummy19'!-->
+		<!-- cannot find module for dummy 'dummy20'!-->
+		<!-- cannot find module for dummy 'dummy21'!-->	
+		<!-- cannot find module for dummy 'dummy22'!-->
+		<!-- cannot find module for dummy 'dummy23'!-->
+		<!-- cannot find module for dummy 'dummy24'!-->
+		<!-- cannot find module for dummy 'dummy25'!-->
+		<!-- cannot find module for dummy 'dummy26'!-->
+		<!-- cannot find module for dummy 'dummy27'!-->
+		<!-- cannot find module for dummy 'dummy28'!-->
+		<!-- cannot find module for dummy 'dummy29'!-->
+		<!-- cannot find module for dummy 'dummy30'!-->
+		<!-- cannot find module for dummy 'dummy31'!-->
+		<!-- cannot find module for dummy 'dummy32'!-->
+		<!-- cannot find module for dummy 'dummy33'!-->
+		<!-- cannot find module for dummy 'dummy34'!-->
+		<!-- cannot find module for dummy 'dummy35'!-->
+	</div>
+</group>
+				</div>	
+			</div>
+		</div>
+	</div>
+</group>
+
+	<feedbacks>
+            <feedback>
+                <condition>
+                        <and>
+    <propertyCondition property="wrong"/>
+                        </and>
+                </condition>
+<action>
+        <showUrl href="media/wrong.mp3" type="narration">
+                        <source src="media/wrong.mp3" type="audio/mp4"/>
+        </showUrl>
+</action>
+            </feedback>
+            <feedback>
+                <condition>
+                        <and>
+    <propertyCondition property="ok"/>
+                        </and>
+                </condition>
+<action>
+        <showUrl href="media/ok.mp3" type="narration">
+                        <source src="media/ok.mp3" type="audio/mp4"/>
+        </showUrl>
+</action>
+            </feedback>
+    </feedbacks>
+
+    <!-- <feedbacks>
+            <feedback>
+                <condition>
+                        <and>
+    <propertyCondition property="allOk"/>
+                        </and>
+                </condition>
+<action>
+        <showUrl href="media/allok.mp3" type="narration">
+                        <source src="media/allok.mp3" type="audio/mp4"/>
+        </showUrl>
+</action>
+            </feedback>
+    </feedbacks> -->
+</group>
+	            <!-- cannot find module for dummy 'dummy2'!-->
+	            <!-- cannot find module for dummy 'dummy3'!-->
+	            <!-- cannot find module for dummy 'dummy4'!-->
+	            <!-- cannot find module for dummy 'dummy5'!-->
+	            <!-- cannot find module for dummy 'dummy6'!-->
+	            <!-- cannot find module for dummy 'dummy7'!-->
+	            <!-- cannot find module for dummy 'dummy8'!-->
+	            <!-- cannot find module for dummy 'dummy9'!-->
+	            <!-- cannot find module for dummy 'dummy10'!-->
+	        </div>
+	    </div>
+	   	<div class="lesson-footer-buttons">    
+	        <markAllButton class="lesson-footer-action-button mark-answers" id="markAnswers"/>
+	        <showAnswersButton class="lesson-footer-action-button show-answers" id="showAnswers"/>
+	        <resetButton class="lesson-footer-action-button reset" id="reset"/>
+	    </div>
+	    <div class="page-menu">	
+			<div class="menu-button"/>
+			<report class="menu-content">
+			  <prr>
+				<rd>
+					<div class="toc-line"> 
+						<link> 
+							<div class="toc-line-table">
+								<info class="variable-page-title"/>
+							</div>
+						</link>
+					</div>
+				</rd>
+			  </prr>
+			</report>
+		</div>
+			</itemBody>
+</assessmentItem>

@@ -12,9 +12,9 @@
 	</metadata>
 	<organizations default="EYC_L1U1_ORG_01">
 		<organization identifier="EYC_L1U1_ORG_01">
-			<title>What a funny story!</title>
+			<title>Who's that person?</title>
 			<item identifier="EYC_L1U1_ITEM_01" identifierref="EYC_L1U1_ORG_01_RES_01" isvisible="true">
-				<title>What a funny story!</title>
+				<title>Who's that person?</title>
 			</item>
 		</organization>
 	</organizations>
