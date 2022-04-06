@@ -1,0 +1,23 @@
+.type_1{
+}
+.type_1 .a_player {
+    position: absolute;
+    z-index: 10;
+    left: 54px;
+}
+.type_1 .qp-img-container{
+	padding: 12px 0 0 12px;
+}
+.type_1 .qp-placeholder {
+	display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+}
+.type_1 .qp-textinteraction{
+    padding: 2px 0 0px 12px;
+}
+.type_1 .column{
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+}

@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script>
+		var assetName = 'y3_u58_p4_001g';
+
+		var manifest = [
+			{src:"sounds/allOk.mp3", id:"allOk"},
+			{src:"sounds/ok.mp3", id:"ok"},
+			{src:"sounds/wrong.mp3", id:"wrong"}
+		];
+		
+		var questions = [
+			{ quest:"The animals play basketball.\nWhat a s___y story!",								answer:"The animals play basketball.\nWhat a silly story!",									audio:"",	image:"",		imageBig:""}, // "image" must contain path and filename with extension (jpg or png)
+			{ quest:"In the end the yellow bird sings.\nWhat a beau____l story!",						answer:"In the end the yellow bird sings.\nWhat a beautiful story!",						audio:"",	image:"",		imageBig:""}, // if there are no image just leave quotes empty like 'image:""'
+			{ quest:"The girl is eight. She plays the piano and sings on TV.\nWhat an a__z__g story!",	answer:"The girl is eight. She plays the piano and sings on TV.\nWhat an amazing story!",	audio:"",	image:"",		imageBig:""},
+			{ quest:"The old man isn't angry. He smiles.\nWhat a g___t story!",							answer:"The old man isn't angry. He smiles.\nWhat a great story!",							audio:"",	image:"",		imageBig:""}
+		];
+
+		var imagesIncluded = false;
+		
+		var width  = 172;  // width of each image, must be the same
+		var height = 130;  // height of each image, must be the same
+		var posX   = 300;  // pos X of images
+		var posY   = 30;   // pos Y of images
+		
+		var abc = "abcdefghijklmnopqrstuvwxyz"; // max. 30 letters //
+		
+		//var offsetYtexts = 0; 
+		var offsetYtexts = -35;  // 20 pixels up text and audiobutton if exist
+		//var offsetYtexts = 20;  // 20 pixels down text and audiobutton if exist
+
+		var allOkText = "Well done!";
+		
+		var gfxEngine = "blocks"; // other possibilities "apple", "tree", "tree", "castle" //
+		//var gfxEngine = "apple"; 
+		//var gfxEngine = "tree"; 
+		//var gfxEngine = "castle"; 
+		
+		var borderStyle = "default"; // other possibility "seaStyle" //
+		//var borderStyle = "seaStyle";
+		
+		var backgroundStyle = "default"; // other possibility: "png" display "background1.png" as background //
+		//var backgroundStyle = "png";
+
+		var buttonAudioVisible = false;
+		
+		var buttonAudioAfterLine = "default";  // "default" - button audio after first line of text, but distance from the longest text;   
+		//var buttonAudioAfterLine = "last";     // "last"    - button audio after last/third line of text
+		
+	</script>
+	
+    <script type="text/javascript" src="libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="libs/underscore-min.js"></script>
+    <script type="text/javascript" src="libs/RequestAnimationFrame.js"></script>
+    <script type="text/javascript" src="libs/ydp/presentation-template.js"></script>
+    <script type="text/javascript" src="libs/ydp/interactive-activity.js"></script>
+    <script type="text/javascript" src="libs/ydp/image-animation.js"></script>
+    <script type="text/javascript" src="libs/ydp/slider.js"></script>
+    <script type="text/javascript" src="libs/ydp/snap.svg-min.js"></script>
+	
+  </head>
+  <body>
+
+  <div class="ia-container">
+
+	<div id="svg0">
+	  <svg id="svg_0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 900 430">
+		<rect width="900" height="430" fill="#000" opacity="0" />
+      </svg>
+    </div>
+
+	<div id="letters0">
+      <svg display="none" id="anim-letters0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters0" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter0" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters1">
+      <svg display="none" id="anim-letters1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters1" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter1" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters2">
+      <svg display="none" id="anim-letters2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters2" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter2" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters3">
+      <svg display="none" id="anim-letters3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters3" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter3" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters4">
+      <svg display="none" id="anim-letters4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters4" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter4" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters5">
+      <svg display="none" id="anim-letters5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters5" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter5" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters6">
+      <svg display="none" id="anim-letters6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters6" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter6" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters7">
+      <svg display="none" id="anim-letters7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters7" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter7" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters8">
+      <svg display="none" id="anim-letters8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters8" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter8" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters9">
+      <svg display="none" id="anim-letters9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters9" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter9" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters10">
+      <svg display="none" id="anim-letters10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters10" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter10" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters11">
+      <svg display="none" id="anim-letters11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters11" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter11" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters12">
+      <svg display="none" id="anim-letters12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters12" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter12" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters13">
+      <svg display="none" id="anim-letters13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters13" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter13" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters14">
+      <svg display="none" id="anim-letters14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters14" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter14" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters15">
+      <svg display="none" id="anim-letters15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters15" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter15" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters16">
+      <svg display="none" id="anim-letters16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters16" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter16" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters17">
+      <svg display="none" id="anim-letters17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters17" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter17" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters18">
+      <svg display="none" id="anim-letters18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters18" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter18" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters19">
+      <svg display="none" id="anim-letters19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters19" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter19" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters20">
+      <svg display="none" id="anim-letters20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters20" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter20" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters21">
+      <svg display="none" id="anim-letters21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters21" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter21" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters22">
+      <svg display="none" id="anim-letters22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters22" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter22" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters23">
+      <svg display="none" id="anim-letters23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters23" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter23" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters24">
+      <svg display="none" id="anim-letters24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters24" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter24" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters25">
+      <svg display="none" id="anim-letters25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters25" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter25" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters26">
+      <svg display="none" id="anim-letters26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters26" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter26" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters27">
+      <svg display="none" id="anim-letters27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters27" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter1" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters28">
+      <svg display="none" id="anim-letters28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters28" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter28" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="letters29">
+      <svg display="none" id="anim-letters29" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-letters29" x="0" y="0" width="128" height="128" xlink:href="images/letters.png"/>
+			<text id="letter29" transform="translate(25 33)" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+      </svg>
+    </div>
+
+	<div id="allOK">
+      <svg display="none" id="anim-allOK" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 51 51">
+	    	<image id="img-allOK" x="0" y="0" width="64" height="128" xlink:href="images/allOK.png"/>
+      </svg>
+    </div>
+
+    <div id="audioBtn">
+      <svg id="anim-audioBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 50 51">
+		<image id="img-audioBtn" x="0" y="0" width="128" height="128" xlink:href="images/audioBtn.png"/>
+      </svg>
+    </div>
+
+    <div id="resetBtn">
+      <svg id="anim-resetBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 50 51">
+		<image id="img-resetBtn" x="0" y="0" width="64" height="128" xlink:href="images/resetBtn.png"/>
+      </svg>
+    </div>
+
+    <div id="startBtn">
+      <svg display="none" id="anim-startBtn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 70 51">
+		<image id="img-startBtn" x="0" y="0" width="128" height="128" xlink:href="images/startBtn.png"/>
+      </svg>
+    </div>
+
+	<div id="svg">
+		<svg id="interactive-layer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 900 430">
+		  <defs>
+			<image id="allOkBg" width="547" height="60" xlink:href="images/allOkBg.png"/>
+			<image id="background0" width="752" height="430" xlink:href="images/background0.png"/>
+			<image id="background1" width="752" height="430" xlink:href="images/background1.png"/>
+			<image id="progress_line" width="100" height="6" xlink:href="images/progress_line.png"/>
+			<image id="frame0" width="752" height="430" xlink:href="images/frame0.png"/>
+			<image id="frame1" width="752" height="430" xlink:href="images/frame1.png"/>
+			<image transform="translate(535 75)"  id="stack0" width="80"  height="40" xlink:href="images/stack0.png"/>
+			<image transform="translate(525 115)" id="stack1" width="100" height="30" xlink:href="images/stack1.png"/>
+			<image transform="translate(520 145)" id="stack2" width="110" height="30" xlink:href="images/stack2.png"/>
+			<image transform="translate(515 175)" id="stack3" width="120" height="30" xlink:href="images/stack3.png"/>
+			<image transform="translate(510 205)" id="stack4" width="130" height="30" xlink:href="images/stack4.png"/>
+			<image transform="translate(505 235)" id="stack5" width="140" height="30" xlink:href="images/stack5.png"/>
+			<image transform="translate(500 265)" id="stack6" width="150" height="30" xlink:href="images/stack6.png"/>
+			<image transform="translate(495 295)" id="stack7" width="160" height="30" xlink:href="images/stack7.png"/>
+			<image transform="translate(490 325)" id="stack8" width="170" height="30" xlink:href="images/stack8.png"/>
+			<image transform="translate(485 355)" id="stack9" width="180" height="30" xlink:href="images/stack9.png"/>
+
+			<image transform="translate(445 100)" id="apple0" width="265" height="288" xlink:href="images/apple0.png"/>
+			<image transform="translate(445 100)" id="apple1" width="265" height="288" xlink:href="images/apple1.png"/>
+			<image transform="translate(445 100)" id="apple2" width="265" height="288" xlink:href="images/apple2.png"/>
+			<image transform="translate(445 100)" id="apple3" width="265" height="288" xlink:href="images/apple3.png"/>
+			<image transform="translate(445 100)" id="apple4" width="265" height="288" xlink:href="images/apple4.png"/>
+			<image transform="translate(445 100)" id="apple5" width="265" height="288" xlink:href="images/apple5.png"/>
+			<image transform="translate(445 100)" id="apple6" width="265" height="288" xlink:href="images/apple6.png"/>
+			<image transform="translate(445 100)" id="apple7" width="265" height="288" xlink:href="images/apple7.png"/>
+			<image transform="translate(445 100)" id="apple8" width="265" height="288" xlink:href="images/apple8.png"/>
+			<image transform="translate(445 100)" id="apple9" width="265" height="288" xlink:href="images/apple9.png"/>
+
+			<image transform="translate(445 30)" id="tree_"   width="250" height="365" xlink:href="images/tree.png"/>
+			<image transform="translate(650 170)" id="apple_"  width="28"  height="25" xlink:href="images/apple.png"/>
+
+			<image transform="translate(445 150)" id="castle0" width="270" height="180" xlink:href="images/castle0.png"/>
+			<image transform="translate(445 150)" id="castle1" width="270" height="180" xlink:href="images/castle1.png"/>
+			<image transform="translate(445 150)" id="castle2" width="270" height="180" xlink:href="images/castle2.png"/>
+			<image transform="translate(445 150)" id="castle3" width="270" height="180" xlink:href="images/castle3.png"/>
+			<image transform="translate(445 150)" id="castle4" width="270" height="180" xlink:href="images/castle4.png"/>
+			<image transform="translate(445 150)" id="castle5" width="270" height="180" xlink:href="images/castle5.png"/>
+			<image transform="translate(445 150)" id="castle6" width="270" height="180" xlink:href="images/castle6.png"/>
+			<image transform="translate(445 150)" id="castle7" width="270" height="180" xlink:href="images/castle7.png"/>
+			<image transform="translate(445 150)" id="castle8" width="270" height="180" xlink:href="images/castle8.png"/>
+			<image transform="translate(445 150)" id="castle9" width="270" height="180" xlink:href="images/castle9.png"/>
+		  </defs>
+		  <use display="inline" id="background_0" xlink:href="#background0"/>
+		  <use display="none"   id="background_1" xlink:href="#background1"/>
+		  <use id="frame_0" display="inline" xlink:href="#frame0"/>
+		  <use id="frame_1" display="none"   xlink:href="#frame1"/>
+		  <line display="none" id="progress" x1="783" y1="68" x2="878" y2="68" stroke="#FC0" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+		  <use xlink:href="#progress_line" transform="translate(780 65)"/>
+		  <g display="none" id="stack" transform="translate(0 0)">
+		    <use id="stack_0" xlink:href="#stack0"/>
+		    <use id="stack_1" xlink:href="#stack1"/>
+		    <use id="stack_2" xlink:href="#stack2"/>
+		    <use id="stack_3" xlink:href="#stack3"/>
+		    <use id="stack_4" xlink:href="#stack4"/>
+		    <use id="stack_5" xlink:href="#stack5"/>
+		    <use id="stack_6" xlink:href="#stack6"/>
+		    <use id="stack_7" xlink:href="#stack7"/>
+		    <use id="stack_8" xlink:href="#stack8"/>
+		    <use id="stack_9" xlink:href="#stack9"/>
+		  </g>
+		  <g display="none" id="apple" transform="translate(0 0)">
+		    <use id="apple_0" xlink:href="#apple0"/>
+		    <use display="none" id="apple_1" xlink:href="#apple1"/>
+		    <use display="none" id="apple_2" xlink:href="#apple2"/>
+		    <use display="none" id="apple_3" xlink:href="#apple3"/>
+		    <use display="none" id="apple_4" xlink:href="#apple4"/>
+		    <use display="none" id="apple_5" xlink:href="#apple5"/>
+		    <use display="none" id="apple_6" xlink:href="#apple6"/>
+		    <use display="none" id="apple_7" xlink:href="#apple7"/>
+		    <use display="none" id="apple_8" xlink:href="#apple8"/>
+		    <use display="none" id="apple_9" xlink:href="#apple9"/>
+		  </g>
+		  <g display="none" id="tree" transform="translate(0 0)">
+		    <use id="tree_0"   transform="translate(0 0)" xlink:href="#tree_"/>
+		    <use id="apple_00" transform="translate(0 0)" xlink:href="#apple_"/>
+		    <use id="apple_01" transform="translate(-40 45)" xlink:href="#apple_"/>
+		    <use id="apple_02" transform="translate(-80 10)" xlink:href="#apple_"/>
+		    <use id="apple_03" transform="translate(-160 10)" xlink:href="#apple_"/>
+		    <use id="apple_04" transform="translate(10 -40)" xlink:href="#apple_"/>
+		    <use id="apple_05" transform="translate(-70 -30)" xlink:href="#apple_"/>
+		    <use id="apple_06" transform="translate(-190 -30)" xlink:href="#apple_"/>
+		    <use id="apple_07" transform="translate(-140 -50)" xlink:href="#apple_"/>
+		    <use id="apple_08" transform="translate(-55 -85)" xlink:href="#apple_"/>
+		    <use id="apple_09" transform="translate(-120 -110)" xlink:href="#apple_"/>
+		  </g>
+		  <g display="none" id="castle" transform="translate(0 0)">
+		    <use id="castle_0" xlink:href="#castle0"/>
+		    <use display="none" id="castle_1" xlink:href="#castle1"/>
+		    <use display="none" id="castle_2" xlink:href="#castle2"/>
+		    <use display="none" id="castle_3" xlink:href="#castle3"/>
+		    <use display="none" id="castle_4" xlink:href="#castle4"/>
+		    <use display="none" id="castle_5" xlink:href="#castle5"/>
+		    <use display="none" id="castle_6" xlink:href="#castle6"/>
+		    <use display="none" id="castle_7" xlink:href="#castle7"/>
+		    <use display="none" id="castle_8" xlink:href="#castle8"/>
+		    <use display="none" id="castle_9" xlink:href="#castle9"/>
+		  </g>
+		  <text id="question0" font-family="Trebuchet MS" font-size="25"></text>
+		  <text id="question1" font-family="Trebuchet MS" font-size="25"></text>
+		  <text id="question2" font-family="Trebuchet MS" font-size="25"></text>
+		  <text id="questionCounter" transform="translate(800 35)" font-family="Trebuchet MS" text-anchor="middle" font-size="24"></text>
+		  <g display="none" id="allOK0" transform="translate(166 204)">
+			<use xlink:href="#allOkBg" transform="translate(-54 -14)"/>
+			<text id="allOKtext" x="220" y="22" font-family="Trebuchet MS" text-anchor="middle" font-size="24">x</text>
+		  </g>
+		</svg>
+    </div>
+	 
+  </div>
+  </body>
+</html>

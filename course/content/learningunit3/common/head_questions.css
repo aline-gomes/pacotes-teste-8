@@ -1,0 +1,124 @@
+.head{
+    margin-top: 439px;
+    position: absolute;
+    text-align: right;
+    width: 924px;
+    z-index: 100;
+}
+
+.head_questions{
+    margin-top: 439px;
+    position: absolute;
+    text-align: right;
+    width: 924px;
+    z-index: 110;
+}
+
+.emp_head_questions{
+	display:inline-block;
+	vertical-align:top;
+	width:100px;
+	height:138px;
+	overflow:hidden;
+	background: url(mrsblack_bust.png) no-repeat top center;
+}
+
+.emp_head_text_container{
+	display:inline-block;
+	vertical-align:top;
+	height:50px;
+	margin-top: 18px;
+	overflow:hidden;
+}
+
+.emp_head_left{
+	display:inline-block;
+	 vertical-align: top;
+	background: url(bg_head_text.png) no-repeat top left;
+	width:20px;
+	height:50px
+}
+
+.emp_head_center{
+	display:inline-block;
+	vertical-align: top;
+	background: #5FC2ED;
+	max-width: 610px;
+	overflow:hidden;
+}
+
+.emp_head_right{
+	display:inline-block;
+	 vertical-align: top;
+	background: url(bg_head_text.png) no-repeat top right;
+	width:120px;
+	height:50px
+}
+
+.emp_head_text_position{
+	display:inline-block;
+	vertical-align:middle;
+	height:50px
+}
+
+.emp_head_text{
+	display:inline-block;
+	vertical-align:middle;
+	color:#fff;
+	line-height: 1em;
+	text-align:left;
+}
+
+.emp_head_player{
+    display: inline-block;
+    margin-top: 0px;
+    vertical-align: top;
+}
+
+.emp_head1{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.emp_head2{
+	display:inline-block;
+	vertical-align:top;
+}
+
+
+.flip .qp-img {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+.head .qp-img-container {
+	margin:0;
+	padding:0;
+}
+
+.head .qp-img {
+	border:none;
+	background: none;
+}
+
+/* correction */
+.head{
+    position: absolute;
+    text-align: right;
+    width: 924px;
+    z-index: 100;
+    bottom:-50px;
+	margin:0;
+}
+.head_questions{
+    position: absolute;
+    text-align: right;
+    width: 924px;
+    z-index: 110;	
+	bottom:-50px;
+	margin:0;
+}

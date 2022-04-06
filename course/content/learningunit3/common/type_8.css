@@ -1,0 +1,52 @@
+.type_8{
+}
+.type_8 .a_player {
+    position: absolute;
+    z-index: 10;
+}
+.type_8 .qp-img-container{
+    float: left;
+    margin: 12px 0 0 12px;
+}
+.type_8 .qp-placeholder {
+	display: inline-block;
+    vertical-align: middle;
+    padding: 3px 0 0 0;
+   	float: left;
+}
+.type_8 .column{
+    padding: 0 5px 6px;
+}
+.type_8 .element {
+    display: inline-block;
+}
+
+
+.type_8 .playera .qp-img-container{
+    float: none;
+}
+.type_8 .playera .qp-placeholder {
+	float: none;
+}
+
+
+/*  column audio button  */
+.type_8 .element_audio{
+	margin-top:20px;
+	margin-right:10px;
+	width:50px;
+}
+.type_8 .element_audio .a_player{
+	position:inherit;
+}
+.type_8 .column_audio{
+    display: inline-block;
+    margin-top: 25px;
+    vertical-align: top;
+    line-height: 0;
+}
+.type_8 .column_content{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}

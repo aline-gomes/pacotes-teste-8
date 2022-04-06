@@ -1,0 +1,10 @@
+.emp_link_button {
+}
+
+.qp-markall-button, .qp-continue-button {
+    display:none;
+}
+
+.qp-showanswers-button, .qp-hideanswers-button {
+    display:none;
+}

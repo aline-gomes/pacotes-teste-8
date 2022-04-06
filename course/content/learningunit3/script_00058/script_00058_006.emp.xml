@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.188" identifier="ITEM_006" playerVersion="1.8.0" timeDependent="false" title="Lesson report">
+<styleDeclaration><link href="../common/feedback.css" userAgent=".*"/><link href="../common/default.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+<div class="emp_report_page emp_content_height">
+
+<div class="emp_report_page emp_content_height">
+
+	<div class="emp_report_content">
+		<report class="report-page">
+      		<prr>
+        		<rd>
+          			<div class="emp_content_icon">
+          				<div class="emp_content_position"/>
+          				<div class="emp_report_link">
+		          				<link>
+		          					<info class="info_report_2"/>
+		          					<info class="variable-page-feedback"/>	
+		          				</link>
+	          				</div>
+				 		<div class="emp_info_report_4"><info class="info_report_4"/></div>
+				 		<div class="emp_info_report_3"><info class="info_report_3"/></div>	
+				 	</div>
+          		</rd>
+			</prr>
+		</report>
+    
+		<report class="emp_report_total">
+			<rr>
+				<rd>
+					<div class="emp_content_icon">
+						<div class="emp_content_position"/>
+						<div class="emp_report_text_total"><simpleText>Total:</simpleText></div>
+						<info class="info_report_test_4"/>
+						<info class="info_report_test_3"/>
+					</div>
+				</rd>
+			</rr>
+		</report>    
+	</div>
+
+	<group class="align_hc" id="dummy3">
+		<externalPresentation class="report_frame" id="dummy3_1" src="../../report_1"/>
+	</group>
+	
+	<div class="emp_footer">
+		<div class="emp_footer_inner">
+			<div class="emp_icon_page"><div class="emp_info_page_inset"><info class="info_content_title"/></div></div>
+			<div class="emp_link_button">
+				<button class="emp_copyright-button" href="https://www.standfor.com.br/"/>
+				<link url="https://www.standfor.com.br/"><span>All rights reserved to FTD Educação</span></link>
+			</div>
+			<div class="emp_activity_buttons_none"/>
+		</div>
+	</div>
+	
+</div>
+		</itemBody>
+</assessmentItem>

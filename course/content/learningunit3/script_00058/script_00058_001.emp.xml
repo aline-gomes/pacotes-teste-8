@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.188" identifier="ITEM_001" playerVersion="1.8.0" timeDependent="false" title="Presentation">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/player.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>0</value>
+		</defaultValue>
+	</outcomeDeclaration>
+		<itemBody>
+
+<div class="emp_media_page emp_content_height">
+	<div class="emp_media_content">
+		<group class="questions" id="dummy1">
+	<div class="emp_questions">
+	<div class="emp_activity_title">
+		<div class="emp_activity_title_audio"><audioPlayer class="a_player" data="media/rub_01au.mp3" id="dummy1_1">
+<source src="media/rub_01au.mp3" type="audio/mp4"/>		<template>
+		<div class="audio_player">
+			<mediaPlayStopButton id="mediaPlayStopButton"/>
+	</div>
+		</template>
+	</audioPlayer></div>
+		<div class="emp_activity_title_text">
+		<div class="emp_activity_title_col_left"/>
+		<div class="emp_activity_title_col_main">
+		<div class="emp_activity_questions_position"/>
+			<div class="emp_activity_questions"><simpleText id="dummy1_2">
+Listen and watch.</simpleText></div>
+		</div>
+		<div class="emp_activity_title_col_right"/>
+		</div>
+</div>
+
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+	
+</div>
+</group>
+		<group class="align_hc" id="dummy2">
+	<video class="v_player" height="360" id="dummy2_1" poster="media/y3_u58_p1_001ss.jpg" width="640"> <source src="media/y3_u58_p1_001ss.mp4" type="video/mp4"/>	</video>
+</group>
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+	</div>
+	<div class="emp_footer">
+		<div class="emp_footer_inner">
+			<div class="emp_icon_page"><div class="emp_info_page_inset"><info class="info_content_title"/></div></div>
+			<div class="emp_link_button">
+				<button class="emp_copyright-button" href="https://www.standfor.com.br/"/>
+				<link url="https://www.standfor.com.br/"><span>All rights reserved to FTD Educação</span></link>
+			</div>
+			<div class="emp_activity_buttons_none"/>
+		</div>
+	</div>
+</div>
+		</itemBody>
+</assessmentItem>

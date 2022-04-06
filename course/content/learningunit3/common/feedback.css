@@ -1,0 +1,80 @@
+.variable-page-feedback{
+ 	-empiria-info-content: $[item.feedback];
+}
+.variable-page-feedback{
+ 	color: #666666;
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    width: 230px;
+	}
+.emp_report_page.noscroll .variable-page-feedback{
+ 	color: #666666;
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    width: 370px;
+	}	
+.variable-page-feedback > *{
+    padding:0 10px;
+	}	
+.emp_report_page.noscroll.notitle .info_report_2{
+	display:none;
+	}
+.emp_report_page.noscroll .emp_content_position{
+	margin-left: 100px;
+	}
+.emp_report_page.noscroll .activity_page .emp_content_icon,
+.emp_report_page.noscroll .activity_page_scroll .emp_content_icon{
+	background:url(icon_report_02_feedback.png) no-repeat center;
+	width:100%;
+	height:90px;
+	}
+.emp_report_page.noscroll .emp_report_text_total{
+	width: 370px;
+}
+
+.emp_report_page.noscroll .activity_placement_test_page .emp_content_position,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .emp_content_position,
+.emp_report_page.noscroll .activity_placement_test_page .emp_info_report_4,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .emp_info_report_4{
+	display:none;
+}
+
+.emp_report_page.noscroll .activity_placement_test_page .emp_report_link,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .emp_report_link{
+	display: table-cell;
+	vertical-align: middle;
+	width: 560px;
+	padding: 0px 10px 10px 210px;
+	height: 80px;
+}
+.emp_report_page.noscroll .activity_placement_test_page .info_report_2,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .info_report_2{
+	color: #474747;
+    display: block;
+    font-size: 0.8em;
+    line-height: initial;
+    text-align: center;
+    width: initial;
+}
+.emp_report_page.noscroll .activity_placement_test_page .variable-page-feedback,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .variable-page-feedback{
+ 	color: #666666;
+    display: block;
+    font-size: 0.7em;
+    line-height: initial;
+    text-align: center;
+    width: initial;
+}
+.emp_report_page.noscroll .activity_placement_test_page .emp_info_report_3,
+.emp_report_page.noscroll .activity_placement_test_page_scroll .emp_info_report_3{
+	color: #FFF;
+	display: table-cell;
+	text-align: right;
+	vertical-align: middle;
+	min-width: 60px;
+	margin: 0;
+}
