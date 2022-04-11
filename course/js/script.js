@@ -7,11 +7,7 @@ var timing = false;
 var txt_infos;
 var isLms = true;
 var report_data = "";
-var currentScreen = 0;
-var p_done = [];
-var sw_c = 0;
-var tela4 = false;
-const notFix = ["Practice 1", "Practice 2", "Practice 3"];
+const notFix = [4];
 
 function init() {
     // Wait
@@ -26,10 +22,10 @@ function init() {
                 isLms = false;
             }
             clearInterval(waitForLoad);
-            insertLogo();
-            // createReport();
+            createReport();
             initListners();
-            initUnderControl();
+            insertCSS();
+            initUndergroundControls();
             readXml("dictionary\\words.xml");
             dictionary();
         } else {
@@ -59,7 +55,7 @@ function initListners() {
     // Pontuação
     var waitForComplet = setInterval(function () {
         try {
-            if (window.player.getScore() == window.player.getScoreMax()) {
+            if (report[(report.length - 1)]["maxScore"] == report[(report.length - 1)]["score"]) {
                 log("Page is Done");
                 script_scorm.complet();
                 clearInterval(waitForComplet);
@@ -172,18 +168,167 @@ function log(text) {
     }
 }
 
-function insertLogo() {
+// NEW AUDIO FUNCTIONS
+
+function insertCSS() {
     // CSS
-    var logo_style = document.createElement('style');
-    logo_style.type = 'text/css';
-    logo_style.innerHTML = ".emp_copyright-button{cursor: default;} .emp_copyright-button *{cursor: default;} .quest_mag{margin-left: 68px; margin-top: 12px;} .quest_mag2{margin-left: 68px; margin-top: 2px;}";
-    document.getElementsByTagName('head')[0].appendChild(logo_style);
+    var post_css = document.createElement('style');
+    post_css.type = 'text/css';
+    post_css.innerHTML = " *.link-marg {margin-top: 54px !important} .emp_head_text_container{margin-top: 37px !important;}";
+    document.getElementsByTagName('head')[0].appendChild(post_css);
 }
 
-var report = {};
-const ignoreScreens = ['Content', 'Report', 'Credits'];
+
+var currentScreen = 1;
+
+function initUndergroundControls() {
+    setInterval(() => {
+        let fpage = parseInt(document.querySelector('.info_page_counter').querySelector('span').innerHTML.slice(0, 1))
+        if (currentScreen != fpage) {
+            currentScreen = fpage;
+            console.log(`CS > ${currentScreen}`);
+            prepareScreen(currentScreen);
+        }
+    }, 100);
+
+    let audio_player = document.createElement('audio');
+    audio_player.id = "audio_player";
+    let body_pointer = document.querySelector('body');
+    body_pointer.appendChild(audio_player);
+}
+
+// AUDIO FUNC
+
+function playAudio(src) {
+    try {
+        let body_pointer = document.querySelector('body');
+        body_pointer.removeChild(document.querySelector("#audio_player"));
+        let audio_player = document.createElement('audio');
+        audio_player.id = "audio_player";
+        let audio_source = document.createElement('source');
+        audio_source.type = "audio/mp3";
+        audio_source.src = `audio/${src}.mp3`;
+        body_pointer.appendChild(audio_player);
+        audio_player.appendChild(audio_source);
+        audio_player.play();
+    } catch (err) {
+        console.log("Play Audio>>>", err)
+    }
+}
+
+
+function simpleAudioAss(btn_arr, words_arr, audio_arr) {
+    let buttons = document.querySelectorAll(btn_arr);
+    for (btn of buttons) {
+        for (let i = 0; i < words_arr.length; i++) {
+            if (btn.innerHTML == words_arr[i]) {
+                let audio = audio_arr[i];
+                btn.onclick = function (audio) {
+                    return function () {
+                        playAudio(audio);
+                    }
+                }(audio);
+            }
+        }
+    }
+}
+
+// Screen Functions
+
+function prepareScreen(page) {
+    switch (page) {
+        case 5:
+            // screen4Change();
+            break;
+        case 6:
+            // screen6Change();
+            break;
+    }
+}
+
+// SCREEN 4 CHANGE
+
+var screen4f = true;
+
+var audio_arr = [
+    "trilhas_V2_004_audio_ tela 5-7_001",
+    "trilhas_V2_004_audio_ tela 5-7_002",
+    "trilhas_V2_004_audio_ tela 5-7_003",
+    "trilhas_V2_004_audio_ tela 5-7_004",
+    "trilhas_V2_004_audio_ tela 5-7_005",
+]
+
+var btn_names4 = [
+    "tired",
+    "hungry",
+    "lunch",
+    "thirsty",
+    "salad",
+]
+
+function screen4Change() {
+    if (screen4f) {
+        simpleAudioAss('.gwt-Label', btn_names4, audio_arr);
+        screen4f = false;
+    }
+}
+
+
+// SCREEN 6 CHANGE
+
+var name_arr6 = [
+    "Yes, I am.",
+    "Are you hungry, Kim?",
+    "And I’m thirsty!",
+    "Kim? Are you tired?",
+    "I’m tired and I’m hungry!",
+]
+
+var audios_arr6 = [
+    "trilhas_V2_004_audio_ tela 6-7_001",
+    "trilhas_V2_004_audio_ tela 6-7_002",
+    "trilhas_V2_004_audio_ tela 6-7_003",
+    "trilhas_V2_004_audio_ tela 6-7_005",
+    "trilhas_V2_004_audio_ tela 6-7_006",
+]
+
+function screen6Change() {
+    var targets = [];
+    try {
+        document.querySelectorAll('iframe').forEach((item) => {
+            let piv_target = item.contentWindow.document.body.querySelectorAll('.source-list-element');
+            if (piv_target.length > 0) {
+                targets = piv_target;
+            }
+        })
+    } catch (err) {
+        console.log("ES6>>>", err);
+        setTimeout(() => { screen6Change() }, 100);
+    }
+    if (targets.length == 0) {
+        setTimeout(() => { screen6Change() }, 100);
+        return;
+    }
+    for (btn of targets) {
+        for (let i = 0; i < name_arr6.length; i++) {
+            if (btn.textContent == name_arr6[i]) {
+                let audio = audios_arr6[i]
+                btn.onclick = function (audio) {
+                    return function () {
+                        playAudio(audio);
+                    }
+                }(audio);
+            }
+        }
+        btn.style.cssText = "text-transform: uppercase !important;";
+    }
+}
+
+var report = [];
+const ignoreScreens = ['Content', 'Report', 'Credits', 'Lesson report', '', 'CREDITS'];
 
 function createReport() {
+    report = [];
     report_data = window.player.getLessonJSONReport();
     let obj = JSON.parse(report_data);
     let t_s = 0;
@@ -191,133 +336,50 @@ function createReport() {
     Object.keys(obj.items).forEach((element, index) => {
         let x = obj.items[element];
         if (!ignoreScreens.includes(x.title)) {
-            let co = "orange";
+            let co = "icon_report_02";
             let sc = 0;
             let ms = 0;
             let has = true;
 
-            notFix.includes(x.title) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done + x.result.errors);
+            notFix.includes(parseInt(index)) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done);
             ms = parseInt(x.result.todo);
             x.result.todo != 0 ? has = true : has = false;
             switch (x.title.substring(0, 4)) {
-                case 'Lead':
-                    co = 'orange';
-                    break;
-                case 'Main':
-                    co = 'pink';
+                case 'Pres':
+                    co = 'icon_report_01';
                     break;
                 case 'Prac':
-                    co = 'purple';
+                    co = 'icon_report_02';
                     break;
                 case 'Engl':
-                    co = 'blue';
+                    co = 'icon_report_03';
                     break;
             }
-
-            report[x.title] = {
+            report.push({
+                "title": x.title,
                 "color": co,
                 "score": sc,
                 "maxScore": ms,
                 "hasScore": has,
-            }
+            });
+
+
             t_s += sc;
             t_m += ms;
         }
     });
-    report["Total"] = {
-        "color": "gray",
+    report.push({
+        "title": "Total",
+        "color": "icon_report_04",
         "score": t_s,
         "maxScore": t_m,
-        "hasScore": true
-    }
-    // console.log(report);
-}
-
-function initUnderControl() {
-    try {
-        var target = document.querySelector('.qp-page-in-page').childNodes[0];
-        var observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
-                let x = parseFloat(target.style.left) / 100;
-                currentScreen = x == 0 ? 0 : (x * -1);
-                console.log(`CS => ${currentScreen}`);
-                prepareScreen();
-            });
-        });
-        var config = { attributes: true };
-        observer.observe(target, config);
-    } catch (error) {
-        console.log(`Cannot init observer, trying againt in 5 seconds \n Err ${error}`);
-        setTimeout(initUnderControl, 5000);
-    }
-}
-
-// Checar mobile avançado
-var isMobile = false;
-
-function mobileAndTabletCheck() {
-    let check = false;
-    (function (a) {
-        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
-    })(navigator.userAgent || navigator.vendor || window.opera);
-    isMobile = check;
-    return check;
-};
-
-function prepareScreen() {
-    switch (currentScreen) {
-        case 4:
-            if (!tela4) {
-                iniciarScriptButtons();
-                tela4 = true;
-            }
-            break;
-    }
-}
-
-function iniciarScriptButtons() {
-    setTimeout(function () {
-        let buttonsClickContainers = document.querySelectorAll(".qp-exlistbox-base-container-inner");
-
-        buttonsClickContainers.forEach(function (element, index) {
-            element.setAttribute("id", "base-button-" + index);
-
-            // PARA DETECTAR O CLICK NO MOBILE
-            if (mobileAndTabletCheck()) {
-                element.addEventListener("touchend", function () {
-                    comboboxCorrection(this);
-                });
-            }
-            else {
-                element.addEventListener("click", function () {
-                    comboboxCorrection(this);
-                });
-            }
-        });
-    }, 300);
-}
-
-function comboboxCorrection(currentButton) {
-    setTimeout(function () {
-        let boxSelected = document.querySelector(".qp-exlistbox-popup-container");
-        let buttonSelected = document.querySelector("#" + currentButton.id).parentElement.parentElement.parentElement;
-        let currentHeightBoxSelected = parseInt(boxSelected.style.top.split("px")[0]);
-
-        let distance = buttonSelected.getBoundingClientRect().top - boxSelected.getBoundingClientRect().top;
-        boxSelected.style.top = (distance + currentHeightBoxSelected) + "px";
-    }, 1);
-}
-
-/* DRAG COMUM */
-function returnTopDif() {
-    var doc = document.documentElement;
-    return parseInt((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0));
+        "hasScore": true,
+    });
 }
 
 // Dicionario
 
 var block_dual = false;
-var first_time = true;
 var txt_audio_01;
 var txt_audio_02;
 var txt_audio_03;
@@ -332,40 +394,24 @@ function dictionary() {
     let body = document.querySelector("body");
     body.id = "body";
 
+    let rect = body.getBoundingClientRect();
+
     let bt_dictionary = document.querySelector('.qp-dictionary-button');
     bt_dictionary.onclick = function () {
         if (!block_dual) {
             block_dual = true;
             let dictionary_container = create('', "#body", "dictionary_filter", "pop");
+            dictionary_container.style.cssText = 'height:' + rect.height + 'px';
 
             create('', "#dictionary_filter", "dictionary_container", "pop");
 
             // Column 01
             create('', "#dictionary_container", "column01", "columns");
-            create('', "#column01", "search_container");
-
-            let search = create('input', '#search_container', 'search');
-            search.type = "text";
-            search.oninput = () => {
-                if (search.value.length >= 2) {
-                    fillPanel(search.value, true);
-                }
-            }
-            // search.addEventListener("change", (e)=>{console.log(e.target.value)});
-
-            let bt_search = create('', '#search_container', 'bt_search');
-            bt_search.onclick = () => {
-                fillPanel(search.value, true);
-            }
-
-            // ROWS
-            create('', "#column01", "container_rows");
-            create('', "#container_rows", "row01", "rows");
-
+            create('', "#column01", "row01", "rows");
             // BOTÕES ROW 02
-            create('', "#container_rows", "row02", "rows");
+            create('', "#column01", "row02", "rows");
 
-            let row_1 = ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y", "b", "d", "f", "h", "j", "l", "n", "p", "r", "t", "v", "x", "z"];
+            let row_1 = ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "z", "b", "d", "f", "h", "j", "l", "n", "p", "r", "t", "v", "y"];
 
             for (let i = 0; i < row_1.length; i++) {
                 var num = i;
@@ -390,16 +436,31 @@ function dictionary() {
             // Column 02
             create('', "#dictionary_container", "column02", "columns");
 
+            let search = create('input', '#column02', 'search');
+            search.type = "text";
+            search.oninput = () => {
+                if (search.value.length >= 2) {
+                    fillPanel(search.value, true);
+                }
+            }
+            // search.addEventListener("change", (e)=>{console.log(e.target.value)});
+
+            let bt_search = create('', '#column02', 'bt_search');
+            bt_search.innerHTML = "<span>go</span>";
+            bt_search.onclick = () => {
+                fillPanel(search.value, true);
+            }
+
             // CONTAINER ÁUDIO
             create('', '#column02', 'audio_container');
 
             txt_audio_01 = create('p', '#audio_container', 'txt_audio_01', 'audios_txts');
-            txt_audio_01.innerHTML = "<i>quantifier</i>";
+            txt_audio_01.innerHTML = "<i>preposition</i>";
 
             // ÁUDIO BOX
             create('', '#audio_container', 'box_audio');
 
-            audio = new Audio(`dictionary\\media\\a_couple_of.mp3`);
+            audio = new Audio(`dictionary\\media\\above.mp3`);
 
             bt_play = create('', '#box_audio', 'bt_audio', 'bt_audios');
             bt_play.onclick = () => {
@@ -408,20 +469,23 @@ function dictionary() {
                 bt_play.className = "bt_audios played";
             };
 
-            cleanClassAudio();
+            audio.onended = function () {
+                bt_play.className = "bt_audios";
+            };
 
             txt_audio_02 = create('p', '#box_audio', 'txt_audio_02', 'audios_txts');
-            txt_audio_02.innerHTML = "a couple of";
+            txt_audio_02.innerHTML = "above";
 
             // TXTS CONTAINER ÁUDIO
             txt_audio_03 = create('p', '#audio_container', 'txt_audio_03', 'audios_txts');
-            txt_audio_03.innerHTML = "a few";
+            txt_audio_03.innerHTML = "in a higher position than something else";
 
             txt_audio_04 = create('p', '#audio_container', 'txt_audio_04', 'audios_txts');
-            txt_audio_04.innerHTML = "&#8220I've brought a couple of sandwiches for us.&#8221";
+            txt_audio_04.innerHTML = "&#8220Put the picture above the fireplace.&#8221";
 
             // BOTÃO DE FECHAR
-            let bt_close = create('', "#column01", "bt_close");
+            let bt_close = create('', "#column02", "bt_close");
+            bt_close.innerHTML = "<span>x</span>";
 
             bt_close.onclick = function () {
                 let pop = document.querySelectorAll(".pop");
@@ -434,140 +498,60 @@ function dictionary() {
     };
 }
 
-var word_array = []
-var fillRange = 10;
-var fillCount = 0;
-
 function fillPanel(letra, search = false) {
     // Limpar
     if (container_words.childElementCount > 0) {
         while (container_words.lastElementChild) {
-            first_time = false;
             container_words.removeChild(container_words.lastElementChild)
         }
     }
-
     //Reset
     last_click = null;
     var index = 0;
-    var first_word = [];
-    word_array = []
-    fillRange = 10;
-    fillCount = 0;
-
     //Criar palavra
-    let create_word = (key, first = false) => {
-        let btn;
-        if (first) {
-            btn = create('', "#container_words", "txt_container_" + index, "div_words first_word");
-        } else {
-            btn = create('', "#container_words", "txt_container_" + index, "div_words");
-        }
+    let create_word = (key) => {
+        let btn = create('', "#container_words", "txt_container_" + index, "div_words");
         let txt_container = create('p', "#txt_container_" + index, "txt_" + index, "containers_txts");
-        let remove_class = container_words.childNodes[0];
         txt_container.innerHTML = key;
-
-        for (let i = 0; i < letra.length; i++) {
-            first_word.push(key);
-        }
-
         let nclick = () => {
             if (last_click != null) {
                 last_click.style.cssText = "";
             }
             last_click = btn;
             let word = words[key];
-            remove_class.className = "div_words";
-            btn.style.cssText = "z-index: 1 !important; color: #fff !important; border-color: #E6388F !important; background: url(./img/btn_dictionary_list_selected.png) right center / 32px 32px no-repeat rgb(230, 56, 143); !important;"
+            btn.style.cssText = "background: no-repeat rgb(255, 204, 0) !important;"
             txt_audio_01.innerHTML = word["type"];
             txt_audio_02.innerHTML = key;
             txt_audio_03.innerHTML = word["desc"];
             txt_audio_04.innerHTML = `&#8220${word["examp"]}&#8221`;
-
             audio = new Audio(`dictionary\\media\\${word['sound']}`);
-
             bt_play.onclick = () => {
                 audio.currentTime = 0;
                 audio.play();
                 bt_play.className = "bt_audios played";
             };
 
-            cleanClassAudio();
+            audio.onended = function () {
+                bt_play.className = "bt_audios";
+            };
         }
         btn.onclick = () => { nclick() };
         index++;
-
-        //busca sempre o primeiro elemento
-        if (first_time == false) {
-            Object.entries(letra).forEach(([key, value]) => {
-                let first_information = words[first_word[0]];
-
-                txt_audio_01.innerHTML = first_information["type"];
-                txt_audio_02.innerText = first_word[0];
-                txt_audio_03.innerHTML = first_information["desc"];
-                txt_audio_04.innerHTML = `&#8220${first_information["examp"]}&#8221`;
-
-                audio = new Audio(`dictionary\\media\\${first_information['sound']}`);
-                cleanClassAudio();
-            });
-        }
     }
-
-    let create_see = () => {
-        btn = create('', "#container_words", "txt_container_" + index, "div_words");
-        let txt_container = create('p', "#txt_container_" + index, "txt_" + index, "containers_txts");
-        let remove_class = container_words.childNodes[0];
-        txt_container.innerHTML = "Show more";
-        btn.onclick = () => { fill_amount(10, true) };
-    }
-
     //busca
     if (!search) {
         Object.entries(words).forEach(([key, value]) => {
             if (key.substr(0, 1).toLowerCase() == letra) {
-                // create_word(key);
-                word_array.push(key)
+                create_word(key);
             }
         });
     } else {
         Object.entries(words).forEach(([key, value]) => {
             if (key.search(letra) != -1) {
-                // create_word(key);
-                word_array.push(key)
+                create_word(key);
             }
         });
     }
-
-    // Fills
-    let fill_amount = (amount, check = false) => {
-        if (check) {
-            let cw = document.querySelector('#container_words');
-            cw.removeChild(cw.lastChild)
-        }
-
-        for (let i = fillCount; i < fillRange; i++) {
-            if (i < word_array.length) {
-                if (i == 0) {
-                    create_word(word_array[i], true);
-                } else {
-                    create_word(word_array[i]);
-                }
-            }
-        }
-        fillCount += amount;
-        fillRange += amount;
-        if (fillCount < word_array.length) {
-            create_see();
-        }
-    }
-
-    fill_amount(10);
-}
-
-function cleanClassAudio() {
-    audio.onended = function () {
-        bt_play.className = "bt_audios";
-    };
 }
 
 var words = {};

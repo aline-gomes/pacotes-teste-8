@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	-webkit-text-size-adjust: 100%;
+}
+
+svg {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.ia-container {
+    position: relative;
+    max-width: 900px;
+    max-height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#svg {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#letters0, #letters1, #letters2, #letters3, #letters4, #letters5, #letters6, #letters7, #letters8, #letters9, #letters10, #letters11, #letters12, #letters13, #letters14, #letters15, #letters16, #letters17, #letters18, #letters19, #letters20, #letters21, #letters22, #letters23, #letters24, #letters25, #letters26, #letters27, #letters28, #letters29 {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    width: 5.6666666666666666666666666666667%;
+    height: 11.860465116279069767441860465116%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#allOK {
+    position: absolute;
+    left: 40%;
+    top: 68.604651162790697674418604651163%;
+    width: 5.6666666666666666666666666666667%;
+    height: 11.860465116279069767441860465116%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#audioBtn {
+    position: absolute;
+    left: 38.888888888888888888888888888889%;
+    top: 15.11627906976744186046511627907%;
+    width: 5.5555555555555555555555555555556%;
+    height: 11.860465116279069767441860465116%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#resetBtn {
+    position: absolute;
+    left: 93.444444444444444444444444444444%;
+    top: 0.46511627906976744186046511627907%;
+    width: 5.5555555555555555555555555555556%;
+    height: 11.860465116279069767441860465116%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#startBtn {
+    position: absolute;
+    left: 84.888888888888888888888888888889%;
+    top: 0.46511627906976744186046511627907%;
+    width: 7.7777777777777777777777777777778%;
+    height: 11.860465116279069767441860465116%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#color_spots {
+    position: absolute;
+    left: 35%;
+    top: 10%;
+    width: 14.222222222222222222222222222222%;
+    height: 29.76744186046511627906976744186%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#anim-allOK, #anim-audioBtn, #resetBtn, #anim-startBtn, #letters0, #letters1, #letters2, #letters3, #letters4, #letters5, #letters6, #letters7, #letters8, #letters9, #letters10, #letters11, #letters12, #letters13, #letters14, #letters15, #letters16, #letters17, #letters18, #letters19, #letters20, #letters21, #letters22, #letters23, #letters24, #letters25, #letters26, #letters27, #letters28, #letters29 {
+	cursor: default;
+	//cursor: pointer;
+	//cursor: hand; // IE
+	-webkit-tap-highlight-color: rgba(0,0,0,0); // remove tap highlight color
+}
+}

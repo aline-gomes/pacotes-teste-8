@@ -1,0 +1,100 @@
+.link-marg-custom{
+    position: absolute;
+    left: 35.3%;
+}
+
+#stand2023 *{
+    border: none;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.scrollbox {
+    height: 605px !important;
+    overflow: auto !important;
+}
+
+.text-div {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.text-div * {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+.text-div-b {
+    margin-top: 30px;
+}
+
+.text-div-b * {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+
+.text-div-f {
+    margin-top: 30px !important;
+}
+
+.text-cargo {
+    width: auto;
+    color: #2E356D;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.text-nome {
+    color: black;
+    width: auto;
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-exp{
+    width: auto;
+    color: #474747;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.text-nome span {
+    text-transform: none !important;
+}
+
+.text-b {
+    color: black;
+    width: auto;
+    text-align: center;
+    font-weight: 400;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-b * {
+    text-transform: none !important;
+    font-size: 20px;
+}
+
+#text-d1 {
+    height: 155px;
+}
+
+#text-d2 {
+    height: 70px;
+}
+
+#text-d3 {
+    height: 90px;
+}
+
+#text-d4 {
+    height: 40px;
+}
+
+#text-d5 {
+    height: 130px;
+}

@@ -1,0 +1,849 @@
+#####
+above
+act
+address
+afraid
+Africa
+after
+afternoon
+again
+age
+airport
+alien
+all
+all day
+all right
+also
+always
+amazing
+America
+angry
+animal
+another
+answer
+apple
+arm
+armchair
+at home
+at school
+aunt
+Australia
+awesome
+#####
+baby
+back
+backache
+bad
+badge
+badly
+badminton
+bag
+balcony
+ball
+bamboo
+banana
+bank
+baseball
+baseball cap
+basement
+basketball
+bathroom
+beach
+bear
+beard
+beautiful
+bed
+bedroom
+before
+behind
+bench
+best
+best friend
+better
+between
+big
+bike
+bin
+bird
+birthday
+birthday card
+biscuit
+black
+blanket
+blonde
+blue
+board
+boat
+bookcase
+boring
+bottle
+bottom
+bounce
+bowl
+box
+bread
+breakfast
+brilliant
+bring
+brother
+brown
+brown
+brush
+bug
+building
+burger
+bus driver
+bus station
+bus stop
+busy
+but
+butterfly
+buy
+by bike
+by bus
+by car
+Bye
+#####
+café
+cage
+cake
+calf
+call
+camera
+camping
+Canada
+car
+card
+carpet
+carrot
+cat
+catch
+CD
+CD player
+chair
+cheap
+cheese
+cheetah
+chick
+chicken
+China
+chips / fries
+chocolate
+choose
+church
+cinema
+circus
+city
+class
+classroom
+clean
+climb
+clock
+close
+clothes
+cloud
+cloudy
+clown
+coat
+coconut
+coffee
+coffee shop
+cold
+colour
+come home
+comic
+comic book
+compass
+competition
+computer
+computer game
+cook
+cool
+cough
+country
+countryside
+cousin
+cow
+crazy
+crocodile
+cross
+cry
+cucumber
+cup
+cup of tea
+cupboard
+curly
+cut
+cute
+cycling
+#####
+daisy 
+dance
+dancer
+dangerous
+dark
+daughter
+day
+delicious
+dentist
+desert
+desk
+different
+difficult
+dining room
+dinner
+dirty
+do
+doctor
+dog
+doll
+dolphin
+door
+down
+downstairs
+draw
+drawing
+dress
+drink
+drive
+driver
+driving
+drop
+dry
+duck
+duckling
+DVD
+DVD player
+#####
+ear
+earache
+east
+easy
+eat
+egg
+eight
+eighteen
+eighth
+elephant
+elevator
+eleven
+email
+England
+eraser
+evening
+every day
+exciting
+exercise book
+expensive
+#####
+face
+family
+famous
+fan
+far
+farm
+farmer
+fast
+fat
+father
+favourite
+feed
+feel
+few
+fifteen
+fifth
+film / movie
+find
+find out
+fine
+finish
+fire
+first
+fish
+five
+flavour
+floor
+flower
+fly
+flying
+food
+foot / feet
+football
+forest
+found
+four
+fourteen
+fourth
+fridge
+friend
+frog
+from
+fruit
+fruit salad
+fun
+funny
+fur
+#####
+game
+garden
+get
+get dressed
+get home
+get undressed
+get up
+giraffe
+give
+glass
+glasses
+gloves
+glue
+go
+go for a drive
+go to bed
+go to school
+go to sleep
+go up
+goal
+goat
+goes
+good
+Good afternoon
+good at
+Good evening
+good for
+Good morning 
+Goodbye
+grandchild
+granddaughter
+grandfather
+grandma
+grandmother
+grandpa
+grandparents
+grandson
+grape
+grass
+great
+green
+grey
+ground
+ground floor
+guitar
+#####
+hair
+half past
+hamster
+hand
+handbag
+happen
+happy
+hat
+have a break
+have to
+health
+healthy
+hear
+hedgehog
+Hello
+helmet
+help
+here
+Hi
+high
+hippo
+hobby
+hockey
+holiday
+homework
+hop
+horse
+hours
+house
+hungry
+hurt
+#####
+ice cream
+in
+in front of
+inside
+intelligent
+interesting
+invitation
+invite
+it’s raining
+#####
+jacket
+jeans
+job
+juice
+jump
+jumper
+jumping
+jungle
+#####
+kangaroo
+kick
+kilo
+kilogram
+kind
+king
+kitchen
+kite
+kitten
+knee
+know
+koala
+#####
+lake
+lamb
+lamp
+late
+later
+laugh
+leaf / leaves
+learn
+leg
+lemon
+lemonade
+lesson
+letter
+letterbox
+lettuce
+library
+lift
+like
+like best
+lion
+listen
+listen to
+little
+live
+living room
+lizard
+London
+long
+look
+look after
+look for
+lorry
+lose
+lost
+lots of
+loud
+loudly
+love
+lovely
+lunch
+#####
+make
+make a mistake
+make your bed
+man
+mango
+map
+market
+mat
+maths
+meat
+meet
+midnight
+milk
+mine
+minute
+mirror
+missing
+mobile phone
+Monday
+money
+monkey
+monster
+month
+moon
+morning
+most
+mother
+motorbike
+mountain
+mouse
+moustache
+mouth
+move
+museum
+mushroom
+music
+must
+mustn’t
+#####
+name
+naughty
+near
+neck
+need
+nest
+never
+new
+New York
+next
+next to
+nice
+night
+nine
+nineteen
+ninth
+no more
+noisy
+north
+North Pole
+nose
+now
+nurse
+nut
+#####
+o'clock
+of course
+office
+old
+on foot
+one
+onion
+open
+opposite
+optician
+orange
+outside
+oven
+over
+over there
+#####
+paint
+painting
+palace
+pan
+panda
+paper
+parents
+parrot
+party
+pasta
+pea
+pear
+pen
+pencil
+pencil case
+penguin
+people
+pet
+pet shop
+phone
+photo
+piano
+pick up
+picnic
+picture
+piglet
+pineapple
+pink
+pirate
+pizza
+place
+plane
+planet
+plant
+plate
+play
+play football
+playground
+please
+polar bear
+pond
+pool
+postcard
+pot
+potato
+present
+pretty
+prince
+programme
+puppy
+purple
+purse
+push
+put
+put on
+put up
+puzzle
+pyjamas
+#####
+queen
+question
+quick
+quickly
+quiet
+quietly
+#####
+rabbit
+race
+rain
+rain boots
+rainbow
+raincoat
+rainforest
+rainy
+read
+reading
+ready
+real
+recycle
+red
+restaurant
+rhino
+rhyme
+rice
+ride a bike
+riding
+road
+robot
+room
+rubbish
+ruler
+run
+run away
+runner
+running
+#####
+sad
+sail
+sailing
+salad
+sand
+sandwich
+Saturday
+sausage
+say
+scared
+scarf
+scary
+scooter
+sea
+seaside
+second
+see
+send 
+seven
+seventeen
+seventh
+Shall I...?
+shark
+sheep
+shell
+ship
+shoe
+shop
+shopping bag
+shopping list
+short
+shorts
+shoulder
+shout
+show
+shower
+sign
+silly
+sing
+singer
+sister
+sit down
+six
+sixteen
+sixth
+skate
+skate
+skateboard
+skater
+skating rink
+skip
+skirt
+sky
+skyscraper
+sleep
+slow
+slowly
+small
+smile
+snake
+sneeze
+snow
+snowman
+so
+sock
+sofa
+some
+something
+sometimes
+son
+soup
+south
+South America
+speak
+spell
+spider
+sports centre
+square
+stairs
+stand up
+star
+start
+stomach
+stomachache
+stone
+stop
+story
+straight
+strawberry
+street
+strong
+suddenly
+sugar
+sun
+Sunday
+sunny
+supermarket
+surprise
+swim
+swimming pool
+#####
+T-shirt
+table
+table tennis
+tail
+take
+take off
+take to school
+talk
+tall
+tea
+teacher
+team
+teddy
+television
+tell
+ten
+tennis
+tent
+tenth
+terrible
+test
+text
+than
+thank you
+thanks
+the next morning
+theatre
+then
+thief
+thin
+thing
+think
+third
+thirsty
+thirteen
+three
+throw
+Thursday
+tidy
+tiger
+tired
+toast
+today
+toe
+together
+tomato
+tomorrow
+too
+tooth
+toothache
+top
+top floor
+torch
+tortoise
+touch
+towel
+town
+toybox
+track
+trainers
+treasure
+treasure hunt
+tree
+trousers
+truck
+trunk
+Tuesday
+twelve
+twenty
+two
+#####
+ugly
+umbrella
+uncle
+under
+underground
+up
+upstairs
+usually
+#####
+vegetables
+very
+very much
+vet
+village
+#####
+wake up
+walk
+wall
+warm
+wash 
+watch
+water
+waterfall
+watermelon
+weak
+wear
+weather
+Wednesday
+weekend
+welcome to
+well
+west
+wet
+whale
+wheel
+white
+wide
+wife
+win
+wind
+window
+windy
+wing
+winner
+winter
+woman
+woods
+wool
+word
+work
+world
+worse
+worst
+wow
+write
+wrong
+#####
+year
+yellow
+yesterday
+young
+#####
+zebra
+zoo

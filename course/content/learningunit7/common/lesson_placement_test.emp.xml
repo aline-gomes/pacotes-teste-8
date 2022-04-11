@@ -1,0 +1,28 @@
+<assessmentItem>		<itemBody>
+
+		<div class="emp_header">
+			<div class="emp_header_navi">
+				<div class="emp_header_navi_inset">
+					<div class="emp_button emp_home_button"><link itemIndex="0"><shape class="emp_home_container"/></link></div>
+					<dictionaryButton class="emp_button emp_dictionary_button"/>
+					<div class="emp_info_test_title"><div class="emp_info_test_title_inset"><info class="info_content_title"/></div></div>
+					<div class="emp_info_page_counter">
+						<div class="emp_info_page_counter_inset"><info class="info_page_counter"/></div>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		
+		<div class="emp_content">
+			<div class="emp_content_container">
+				<div class="emp_content_prev"><prevItemNavigation class="emp_button"/></div>
+				<div class="emp_content_center"><div class="emp_content_inset"><pageInPage id="dummy1"/></div>
+			</div>	
+			<div class="emp_content_next"><nextItemNavigation class="emp_button"/></div>				
+			</div>
+		</div>
+			
+		<div class="emp_footer_background"/>
+		
+			</itemBody>
+<styleDeclaration><link href="default.css" userAgent=".*"/><link href="type_0.css" userAgent=".*"/><link href="videojs.css" userAgent=".*"/><link href="reset_view.css" userAgent=".*"/><link href="dictionary.css" userAgent=".*"/><link href="touchfix.css" userAgent=".*"/><link href="copyright.css" userAgent=".*"/></styleDeclaration><metaDescription><meta content="width=device-width, initial-scale=1" name="viewport"/></metaDescription></assessmentItem>

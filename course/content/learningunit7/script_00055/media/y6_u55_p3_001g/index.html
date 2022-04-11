@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<style>*{text-transform: uppercase !important;}</style>
+	<script>
+	
+		// --- SETUP ---
+		
+		
+		var assetName = 'y6_u55_p3_001g';
+		
+		var manifest = [
+			{src:"images/y6_u55_p3_001g_0001.png", id:"image01"},
+			{src:"images/y6_u55_p3_001g_0002.png", id:"image02"},
+			{src:"images/y6_u55_p3_001g_0003.png", id:"image03"},
+			{src:"images/y6_u55_p3_001g_0004.png", id:"image04"},
+			{src:"images/y6_u55_p3_001g_0005.png", id:"image05"},
+			{src:"images/y6_u55_p3_001g_0006.png", id:"image06"},
+			{src:"sounds/y6_u55_p3_001au.mp3", id:"sound01"},
+			{src:"sounds/y6_u55_p3_002au.mp3", id:"sound02"},
+			{src:"sounds/y6_u55_p3_003au.mp3", id:"sound03"},
+			{src:"sounds/y6_u55_p3_004au.mp3", id:"sound04"},
+			{src:"sounds/y6_u55_p3_005au.mp3", id:"sound05"},
+			{src:"sounds/y6_u55_p3_006au.mp3", id:"sound06"},
+			{src:"sounds/allOk.mp3", id:"allOk"}
+		];
+		
+		var pairsNum = 6; // max 9
+		
+		var spaceBetweenElems = 5;
+		
+		var content = [
+			{ id:0, elem0:{text:"", image:"image01", sound:"sound01"}, elem1:{text:"I like\nwalking.", image:"", sound:"sound01"} },
+			{ id:1, elem0:{text:"", image:"image02", sound:"sound02"}, elem1:{text:"I like\ncycling.", image:"", sound:"sound02"} },
+			{ id:2, elem0:{text:"", image:"image03", sound:"sound03"}, elem1:{text:"I like\nrunning.", image:"", sound:"sound03"} },
+			{ id:3, elem0:{text:"", image:"image04", sound:"sound04"}, elem1:{text:"I don't like\nflying.", image:"", sound:"sound04"} },
+			{ id:4, elem0:{text:"", image:"image05", sound:"sound05"}, elem1:{text:"I like\nsailing.", image:"", sound:"sound05"} },
+			{ id:5, elem0:{text:"", image:"image06", sound:"sound06"}, elem1:{text:"I like\ndriving.", image:"", sound:"sound06"} }
+		];
+		
+		var allOkText = "WELL DONE!";
+		
+		// --- SETUP END ---
+
+	</script>
+	
+    <script type="text/javascript" src="libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="libs/underscore-min.js"></script>
+    <script type="text/javascript" src="libs/velocity.min.js"></script>
+    <script type="text/javascript" src="libs/ydp/interactive-activity.js"></script>
+    <script type="text/javascript" src="libs/ydp/presentation-template-2.js"></script>
+</head>
+
+<body>
+
+    <div class="ia-container">
+
+		<div class="in-cont">
+		
+			<div class="" id="resetBtn"></div>
+			<div id="allOkBg"><span></span></div>
+
+			<div class="card-container">
+				<div class="card-row" id="crow0">
+					<div class="card" id="card0-0">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card0-1">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card0-2">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card0-3">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card0-4">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card0-5">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+				</div>
+
+				<div class="card-row" id="crow1">
+					<div class="card" id="card1-0">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card1-1">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card1-2">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card1-3">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card1-4">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card1-5">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+				</div>
+					
+				<div class="card-row" id="crow2">
+					<div class="card" id="card2-0">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card2-1">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card2-2">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card2-3">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card2-4">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+					<div class="card" id="card2-5">
+						<div class="holder"></div>
+						<div class="front"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+    </div>
+	
+	<div id="my-debug">deb</div>
+	
+	<div id="preloader">
+		<img src="images/_01_first.png"/>
+		<img src="images/_02_second.png"/>
+		<img src="images/_03_klik.png"/>
+		<img src="images/frame.png"/>
+		<img src="images/allOkBg.png"/>
+		<img src="images/audio_1.png"/>
+		<img src="images/audio_klik.png"/>
+		<img src="images/reset_klik.png"/>
+	</div>
+
+</body>
+
+</html>
