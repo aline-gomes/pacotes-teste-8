@@ -50,17 +50,17 @@ html, body {
 }
 
 .card0 {
-	background: url("images/_01_first.png") no-repeat center;
+	background: url("images/01_first.png") no-repeat center;
     background-size: contain;
 }
 
 .card1 {
-	background: url("images/_02_second.png") no-repeat center;
+	background: url("images/02_second.png") no-repeat center;
     background-size: contain;
 }
 
 .card-over {
-	background: url("images/_03_klik.png") no-repeat center;
+	background: url("images/03_klik.png") no-repeat center;
     background-size: contain;
 }
 
