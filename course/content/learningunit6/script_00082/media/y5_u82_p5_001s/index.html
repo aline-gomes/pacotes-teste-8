@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script>
+	
+		// --- SETUP ---
+		
+		
+		var assetName = 'y5_u82_p5_001s';
+		
+		var manifest = [
+			{src:"sounds/y5_u82_p5_001au.mp3", id:"snd01"}
+		];
+		
+		var maxSlides = 2;
+		
+		/* 
+			STANDARD SETTINGS:
+			sourceListConf: { x:619, y:150, spaceX:0, spaceY:10, shuffle:true }, 
+			elementTextPadding: { left:22, top:10, right:22, bottom:10 },
+			showBubbleArrows: true,
+			audioButtonVisible: true,
+			resetButtonVisible: true,
+			playFeedbackSounds: true,
+			copySourceList: false
+		*/
+		
+		var slideConf = [
+	
+			{ 
+				sourceListConf: { x:619, y:150, spaceX:0, spaceY:10, shuffle:true }, 
+				elementTextPadding: { left:22, top:10, right:22, bottom:10 },
+				showBubbleArrows: true,
+				audioButtonVisible: true,
+				resetButtonVisible: false,
+				playFeedbackSounds: false,
+				copySourceList: false
+			},
+			{ 
+				sourceListConf: { x:705, y:55, spaceX:195, spaceY:7, shuffle:false }, 
+				elementTextPadding: { left:10, top:5, right:10, bottom:5 },
+				showBubbleArrows: false,
+				audioButtonVisible: false,
+				resetButtonVisible: true,
+				playFeedbackSounds: false,
+				copySourceList: false
+			}
+	
+		];
+		
+		var colors = { blue:"#5FC2ED", green:"#B1D621", yellow:"#FFCC00", pink:"#BC62BB", transparent:"rgba(255,255,255,0)" };
+		
+		var slides = {
+			slide01: [	{txt:"The clown is standing on a ball.\nWhat do you think of the clown?", draggable:false, disruptor:false, audio:"", bubble:{ x:185, y:8,   w:380, h:66, color:colors.blue, arrowPos:"left,down" }},
+						{txt:"I think...",                                                        draggable:false, disruptor:false, audio:"", bubble:{ x:415, y:380, w:150, h:44, color:colors.green, arrowPos:"left,up" }}],
+						
+			slide02: [	{txt:"A.	The clown is standing on a ball.\n    What do you think of the clown?\n\nA.	There is a lion in the town.\n    What do you think of the lion?\n\nA.	The skaters are wearing pretty dresses.\n    What do you think of the skaters?\n\nA.	The singers are singing a happy song.\n    What do you think of the singers?\n\nA.	The football player is kicking the ball.\n    What do you think of the football player?", draggable:false, disruptor:false, bubble:{ x:240, y:200, w:0, h:0, color:colors.blue}},
+						{txt:"B.	I think he’s ___________.\n\n\nB.	I think it’s ___________.\n\n\nB.	I think they’re ___________.\n\n\nB.	I think they’re ___________.\n\n\nB.	I think he’s ___________.", draggable:false, disruptor:false, bubble:{ x:390, y:240, w:0, h:0, alpha:1, color:colors.blue}},
+						{txt:"exciting",  draggable:true, disruptor:false, bubble:{ accept:[2,3,4,5,6,7,8,9,10],     x:385, y:72,  w:110, h:24, color:colors.transparent}},
+						{txt:"funny",     draggable:true, disruptor:true,  bubble:{                                  x:380, y:111, w:110, h:24, color:colors.transparent}},
+						{txt:"silly",     draggable:true, disruptor:false, bubble:{ accept:[2,3,4,5,6,7,8,9,10,11],  x:373, y:150, w:110, h:24, color:colors.transparent}},
+						{txt:"sweet",     draggable:true, disruptor:true,  bubble:{                                  x:370, y:189, w:110, h:24, color:colors.transparent}},
+						{txt:"boring",    draggable:true, disruptor:false, bubble:{ accept:[2,3,4,5,6,7,8,9,10,11],  x:410, y:228, w:110, h:24, color:colors.transparent}},
+						{txt:"dangerous", draggable:true, disruptor:true,  bubble:{                                  x:410, y:267, w:110, h:24, color:colors.transparent}},
+						{txt:"scary",     draggable:true, disruptor:false, bubble:{ accept:[2,3,4,5,6,7,8,9,10,11],  x:410, y:306, w:110, h:24, color:colors.transparent}},
+						{txt:"great",     draggable:true, disruptor:true,  bubble:{                                  x:410, y:345, w:110, h:24, color:colors.transparent}},
+						{txt:"naughty",   draggable:true, disruptor:false, bubble:{ accept:[2,3,4,5,6,7,8,9,10,11],  x:385, y:384, w:110, h:24, color:colors.transparent}},
+						{txt:"good",      draggable:true, disruptor:true,  bubble:{                                  x:380, y:423, w:110, h:24, color:colors.transparent}}]
+		};
+		
+		// --- SETUP END ---
+
+	</script>
+	
+    <script type="text/javascript" src="libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="libs/underscore-min.js"></script>
+    <script type="text/javascript" src="libs/interact-1.2.5.min.js"></script>
+    <script type="text/javascript" src="libs/ydp/interactive-activity.js"></script>
+    <script type="text/javascript" src="libs/ydp/presentation-template.js"></script>
+</head>
+
+<body>
+
+    <div class="ia-container">
+	
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 900 430">
+		
+			<defs>
+				<image id="reset-1" xlink:href="images/reset_1.png" width="50" height="50" />
+				<image id="reset-klik" xlink:href="images/reset_klik.png" width="50" height="50" />
+				<image id="audio-1" xlink:href="images/audio_1.png" width="50" height="50" />
+				<image id="audio-klik" xlink:href="images/audio_klik.png" width="50" height="50" />
+				<image id="audio-over" xlink:href="images/audio_over.png" width="50" height="50" />
+				<image id="next-1" xlink:href="images/next_1.png" width="50" height="50" />
+				<image id="next-klik" xlink:href="images/next_klik.png" width="50" height="50" />
+				<image id="prev-1" xlink:href="images/prev_1.png" width="50" height="50" />
+				<image id="prev-klik" xlink:href="images/prev_klik.png" width="50" height="50" />
+				<g id="small-speaker">
+					<path fill-opacity=".15" d="M2.9 9.45l-.6 10.7h6.95L20 28.85 18.45 1.2 8.8 9.95l-5.9-.5m21.3 1.8q-1.45-1.4-3.45-1.4l.55 9.75q1.65-.2 2.9-1.45 1.4-1.4 1.4-3.4 0-2.05-1.4-3.5z"/>
+					<path fill="#474747" d="M6.45 8.7l-5.9-.45L0 18.95h6.9l10.8 8.7L16.1 0 6.45 8.7m17.3 5.05q0-2-1.4-3.5Q20.9 8.9 18.9 8.9l.55 9.7q1.65-.2 2.9-1.4 1.4-1.4 1.4-3.45z"/>
+				</g>
+				<g id="small-speaker-klik">
+					<rect x="5" y="8" width="16" height="16" fill="#000" fill-opacity=".15"/>
+					<rect x="3" y="6" width="16" height="16" fill="#1F2125"/>
+				</g>
+			</defs>
+			
+		
+			<!-- TAB IMAGES -->
+			
+			<image id="img-tab-0" xlink:href="images/y5_u82_p5_001s_01.png" width="573" height="430" />
+			
+			<image id="img-tab-1" xlink:href="images/y5_u82_p5_001s_02.png" width="573" height="430" />
+			
+
+			<!-- -->
+			
+			
+			<path class="audio-parts" id="audio-arrow" fill="#5FC2ED" stroke="none" d="M 598.4 29.15 L 589.2 14.55 571.95 20.65 571.95 28.7 588.3 21.9 597.4 34.85 617 20.85 598.4 29.15 Z"/>
+			<line class="audio-parts switcher" id="audio-line" x1="678.5" y1="5" x2="678.5" y2="45" stroke="#999" stroke-dasharray="6, 5"/>
+			<rect id="img-frame" x="1" y="1" width="572" height="428"/>
+			<line class="reset-parts switcher" x1="840.5" y1="5" x2="840.5" y2="45" stroke="#999" stroke-dasharray="6, 5"/>
+			<text class="switcher" id="tab-counter" x="760" y="32" id="tf-switcher" fill="#000" text-anchor="middle"></text>
+			<g id="nextBtn" class="button switcher">
+				<use class="normal" xlink:href="#next-1" x="783" width="50" height="50"/>
+				<use class="over" xlink:href="#next-klik" x="783" width="50" height="50"/>
+			</g>
+			<g id="prevBtn" class="button switcher">
+				<use class="normal" xlink:href="#prev-1" x="688" width="50" height="50"/>
+				<use class="over" xlink:href="#prev-klik" x="688" width="50" height="50"/>
+			</g>
+			<g id="audioBtn" class="button audio-parts">
+				<use class="normal" xlink:href="#audio-1" x="620" width="50" height="50"/>
+				<use class="over" xlink:href="#audio-over" x="620" width="50" height="50"/>
+				<use class="pressed" xlink:href="#audio-klik" x="620" width="50" height="50"/>
+			</g>
+			<g id="resetBtn" class="button reset-parts">
+				<use class="normal" xlink:href="#reset-1" x="850" width="50" height="50"/>
+				<use class="over" xlink:href="#reset-klik" x="850" width="50" height="50"/>
+			</g>
+			
+		</svg>
+		
+    </div>
+
+</body>
+
+</html>

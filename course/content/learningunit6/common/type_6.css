@@ -1,0 +1,16 @@
+.type_6{
+}
+.type_6 .column .a_player {
+	float: left;
+}
+.type_6 .qp-placeholder {
+	display: inline-block;
+    padding: 0;
+    vertical-align: middle;
+}
+.type_6 .qp-textinteraction {
+    padding:0 0 0 65px;
+}
+.type_6 .column{
+	height: 150px;
+}

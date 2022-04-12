@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.188" gtm="true" identifer="82 I think he&amp;apos;s very funny." playerVersion="1.8.0" title="I think he&amp;apos;s very funny.">
+				
+		<testView href="common/lesson.emp.xml"/>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<keyword><string>I think</string></keyword>
+		<keyword><string>clause</string></keyword>
+		<keyword><string>singer</string></keyword>
+		<keyword><string>dancer</string></keyword>
+		<keyword><string>skater</string></keyword>
+		<keyword><string>funny</string></keyword>
+		<keyword><string>opinion</string></keyword>
+		<keyword><string>great</string></keyword>
+		<keyword><string>boring</string></keyword>
+		<keyword><string>very good</string></keyword>
+		<keyword><string>okay</string></keyword>
+		<keyword><string>dangerous</string></keyword>
+		<keyword><string>scary</string></keyword>
+		<keyword><string>exciting</string></keyword>
+		<title><string>I think he's very funny.</string></title>
+	</general>
+	<metaMetadata>
+      <contribute>
+        <role>
+          <source>LOMv1.0</source>
+          <value>creator</value>
+        </role>
+        <entity>Paweł Wróblewski</entity>
+      </contribute>
+	</metaMetadata>
+	<educational>
+		<description><string>Learning goals:
+- Expressing and asking about opinions</string></description>
+	</educational>
+</lom>
+	<styleDeclaration>
+		<link href="common/default.css" userAgent=".*"/>
+	</styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="toc_page" href="script_00082/script_00082_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="media_page" href="script_00082/script_00082_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="activity_page_scroll" href="script_00082/script_00082_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="activity_page" href="script_00082/script_00082_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="activity_page" href="script_00082/script_00082_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="l2g_page" href="script_00082/script_00082_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="report_page" href="script_00082/script_00082_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="report_page" href="./newassets/script_1.emp.xml" identifier="ITEM_007"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

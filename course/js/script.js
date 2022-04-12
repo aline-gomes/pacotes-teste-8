@@ -7,7 +7,7 @@ var timing = false;
 var txt_infos;
 var isLms = true;
 var report_data = "";
-const notFix = [];
+const notFix = [3];
 
 function init() {
     // Wait
