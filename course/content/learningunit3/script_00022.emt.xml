@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.188" gtm="true" identifer="22 School starts at nine o’clock." playerVersion="1.8.0" title="School starts at nine o’clock.">
+				
+		<testView href="common/lesson.emp.xml"/>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<keyword><string>start</string></keyword>
+		<keyword><string>finish</string></keyword>
+		<keyword><string>have piano lessons</string></keyword>
+		<keyword><string>lunchtime</string></keyword>
+		<keyword><string>before</string></keyword>
+		<keyword><string>after</string></keyword>
+		<title><string>School starts at nine o’clock.</string></title>
+	</general>
+	<metaMetadata>
+      <contribute>
+        <role>
+          <source>LOMv1.0</source>
+          <value>creator</value>
+        </role>
+        <entity>Aleksandra Palikowska</entity>
+      </contribute>
+	</metaMetadata>
+	<educational>
+		<description><string>Learning goals:
+1. Talking about daily routine
+2. Talking about what time routine activities start
+3. "What time does school start? At nine o'clock."</string></description>
+	</educational>
+</lom>
+	<styleDeclaration>
+		<link href="common/default.css" userAgent=".*"/>
+	</styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="toc_page" href="script_00022/script_00022_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="media_page" href="script_00022/script_00022_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="activity_page" href="script_00022/script_00022_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="activity_page" href="script_00022/script_00022_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="activity_page" href="script_00022/script_00022_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="l2g_page" href="script_00022/script_00022_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="report_page" href="script_00022/script_00022_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="report_page" href="./newassets/script_1.emp.xml" identifier="ITEM_007"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentItem adaptive="false" compilerVersion="3.3.2.188" identifier="ITEM_002" playerVersion="1.8.0" timeDependent="false" title="Practice">
+<styleDeclaration><link href="../common/default.css" userAgent=".*"/><link href="../common/player.css" userAgent=".*"/><link href="../common/type_0c.css" userAgent=".*"/></styleDeclaration>
+	<variableProcessing template="default"/>
+		<outcomeDeclaration cardinality="single" identifier="DONE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+		<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+		<outcomeDeclaration cardinality="single" identifier="RESET"/>
+		<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO">
+		<defaultValue>
+			<value>4</value>
+		</defaultValue>
+	</outcomeDeclaration>
+
+		<outcomeDeclaration cardinality="single" identifier="SELECTION_RESPONSE_1-DONE"/>
+		<outcomeDeclaration cardinality="single" identifier="SELECTION_RESPONSE_1-TODO"/>
+		<outcomeDeclaration cardinality="multiple" identifier="SELECTION_RESPONSE_1-LASTCHANGE"/>
+		<outcomeDeclaration cardinality="multiple" identifier="SELECTION_RESPONSE_1-PREVIOUS"/>
+		<outcomeDeclaration cardinality="single" identifier="SELECTION_RESPONSE_1-LASTMISTAKEN"/>
+		<outcomeDeclaration cardinality="multiple" identifier="SELECTION_RESPONSE_1-DONEHISTORY"/>
+		<outcomeDeclaration cardinality="multiple" identifier="SELECTION_RESPONSE_1-DONECHANGES"/>
+		<outcomeDeclaration cardinality="single" identifier="SELECTION_RESPONSE_1-MISTAKES"/>
+				<responseDeclaration cardinality="multiple" checkMode="default" countMode="correctAnswers" evaluate="user" identifier="SELECTION_RESPONSE_1">
+					<correctResponse>
+						<value>SELECTION_RESPONSE_1_0 SELECTION_RESPONSE_1_1</value>
+						<value>SELECTION_RESPONSE_1_3 SELECTION_RESPONSE_1_4</value>
+						<value>SELECTION_RESPONSE_1_6 SELECTION_RESPONSE_1_4</value>
+						<value>SELECTION_RESPONSE_1_8 SELECTION_RESPONSE_1_1</value>
+					</correctResponse>
+				</responseDeclaration>
+		<itemBody>
+
+<div class="emp_activity_page emp_content_height">
+	<div class="emp_activity_content">
+		<group class="questions" id="dummy1">
+	<div class="emp_questions">
+	<div class="emp_activity_title">
+		<div class="emp_activity_title_audio"><audioPlayer class="a_player" data="media/rub_02au.mp3" id="dummy1_1">
+<source src="media/rub_02au.mp3" type="audio/mp4"/>		<template>
+		<div class="audio_player">
+			<mediaPlayStopButton id="mediaPlayStopButton"/>
+	</div>
+		</template>
+	</audioPlayer></div>
+		<div class="emp_activity_title_text">
+		<div class="emp_activity_title_col_left"/>
+		<div class="emp_activity_title_col_main">
+		<div class="emp_activity_questions_position"/>
+			<div class="emp_activity_questions"><simpleText id="dummy1_2">
+Choose.</simpleText></div>
+		</div>
+		<div class="emp_activity_title_col_right"/>
+		</div>
+</div>
+
+	<!-- cannot find module for dummy 'dummy3'!-->
+	<!-- cannot find module for dummy 'dummy4'!-->
+	<!-- cannot find module for dummy 'dummy5'!-->
+	<!-- cannot find module for dummy 'dummy6'!-->
+	<!-- cannot find module for dummy 'dummy7'!-->
+	<!-- cannot find module for dummy 'dummy8'!-->
+	<!-- cannot find module for dummy 'dummy9'!-->
+	<!-- cannot find module for dummy 'dummy10'!-->
+	
+</div>
+</group>
+		<group class="type_0c" id="dummy2">
+	<div class="activity align_hc">
+	 <div class="align_vm_content"/>
+	 <div class="row align_vm w100">
+		<group class="w100 align_hc" id="dummy2_1">
+	<group class="box align_hl align_vm right_padding20 dot_liner a_player_over_img" id="dummy2_1_1">
+	<audioPlayer class="a_player" data="media/y3_u22_p2_003au.mp3" id="dummy2_1_1_1">
+<source src="media/y3_u22_p2_003au.mp3" type="audio/mp4"/>		<template>
+		<div class="audio_player">
+			<mediaPlayStopButton id="mediaPlayStopButton"/>
+	</div>
+		</template>
+	</audioPlayer>			
+<img fullscreenMode="magnific" id="dummy2_1_1_2" src="media/y3_u22_p2_001i.png" srcFullScreen="media/y3_u22_p2_001i_f.png">
+</img>
+</group>			
+<group class="box column_activity align_hl align_vm left_padding20" id="dummy2_1_2">
+	<group class="box column_txt align_vt" id="dummy2_1_2_1">
+	<selectionInteraction class="tf_textr tf_padding" id="dummy2_1_2_1_1" matchMax="1" responseIdentifier="SELECTION_RESPONSE_1">
+        <item identifier="SELECTION_RESPONSE_1_0" matchMax="1">I get dressed</item>
+        <item identifier="SELECTION_RESPONSE_1_3" matchMax="1">I have dinner</item>
+        <item identifier="SELECTION_RESPONSE_1_6" matchMax="1">I go to bed</item>
+        <item identifier="SELECTION_RESPONSE_1_8" matchMax="1">I have breakfast</item>
+
+        <simpleChoice identifier="SELECTION_RESPONSE_1_1" matchMax="1">before</simpleChoice>
+        <simpleChoice identifier="SELECTION_RESPONSE_1_4" matchMax="1">after</simpleChoice>
+    <feedbacks>
+            <feedback>
+                <condition>
+                        <and>
+    <propertyCondition property="wrong"/>
+                        </and>
+                </condition>
+<action>
+        <showUrl href="media/wrong.mp3" type="narration">
+                        <source src="media/wrong.mp3" type="audio/mp4"/>
+        </showUrl>
+</action>
+            </feedback>
+            <feedback>
+                <condition>
+                        <and>
+    <propertyCondition property="ok"/>
+                        </and>
+                </condition>
+<action>
+        <showUrl href="media/ok.mp3" type="narration">
+                        <source src="media/ok.mp3" type="audio/mp4"/>
+        </showUrl>
+</action>
+            </feedback>
+    </feedbacks>
+</selectionInteraction>
+</group>			
+<group class="box column_txt_add align_vt" id="dummy2_1_2_2">
+	<group class="element_txt" id="dummy2_1_2_2_1">
+	<simpleText id="dummy2_1_2_2_1_1">
+school.</simpleText>
+</group>			
+<group class="element_txt" id="dummy2_1_2_2_2">
+	<simpleText id="dummy2_1_2_2_2_1">
+school.</simpleText>
+</group>			
+<group class="element_txt" id="dummy2_1_2_2_3">
+	<simpleText id="dummy2_1_2_2_3_1">
+school.</simpleText>
+</group>			
+<group class="element_txt" id="dummy2_1_2_2_4">
+	<simpleText id="dummy2_1_2_2_4_1">
+school.</simpleText>
+</group>
+</group>
+</group>
+</group>
+		<!-- cannot find module for dummy 'dummy2'!-->
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy6'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+		<!-- cannot find module for dummy 'dummy9'!-->
+		<!-- cannot find module for dummy 'dummy10'!-->
+		<!-- cannot find module for dummy 'dummy11'!-->
+		<!-- cannot find module for dummy 'dummy12'!-->
+		<!-- cannot find module for dummy 'dummy13'!-->
+		<!-- cannot find module for dummy 'dummy14'!-->
+		<!-- cannot find module for dummy 'dummy15'!-->
+	</div>
+	</div>
+</group>
+		<!-- cannot find module for dummy 'dummy3'!-->
+		<!-- cannot find module for dummy 'dummy4'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy5'!-->
+		<!-- cannot find module for dummy 'dummy7'!-->
+		<!-- cannot find module for dummy 'dummy8'!-->
+	</div>
+	<div class="emp_footer">
+		<div class="emp_footer_inner">
+			<div class="emp_icon_page"><div class="emp_info_page_inset"><info class="info_content_title"/></div></div>
+			<div class="emp_link_button">
+				<button class="emp_copyright-button" href="https://www.standfor.com.br/"/>
+				<link url="https://www.standfor.com.br/"><span>All rights reserved to FTD Educação</span></link>
+			</div>
+			<div class="emp_activity_buttons">
+				<markAllButton class="emp_button"/>
+				<showAnswersButton class="emp_button"/>
+				<resetButton class="emp_button"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</itemBody>
+</assessmentItem>

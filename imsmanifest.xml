@@ -12,9 +12,9 @@
 	</metadata>
 	<organizations default="EYC_L1U1_ORG_01">
 		<organization identifier="EYC_L1U1_ORG_01">
-			<title>Who are they?</title>
+			<title>School starts at nine o’clock.</title>
 			<item identifier="EYC_L1U1_ITEM_01" identifierref="EYC_L1U1_ORG_01_RES_01" isvisible="true">
-				<title>Who are they?</title>
+				<title>School starts at nine o’clock.</title>
 			</item>
 		</organization>
 	</organizations>

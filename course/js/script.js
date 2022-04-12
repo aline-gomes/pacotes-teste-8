@@ -7,7 +7,7 @@ var timing = false;
 var txt_infos;
 var isLms = true;
 var report_data = "";
-const notFix = [3];
+const notFix = [];
 
 function init() {
     // Wait
@@ -23,8 +23,9 @@ function init() {
             }
             clearInterval(waitForLoad);
             insertLogo();
-            // createReport();
+            createReport();
             initListners();
+            initUndergroundControls();
             readXml("dictionary\\words.xml");
             dictionary();
         } else {
@@ -54,7 +55,7 @@ function initListners() {
     // Pontuação
     var waitForComplet = setInterval(function () {
         try {
-            if (window.player.getScore() == window.player.getScoreMax()) {
+            if (report[(report.length - 1)]["maxScore"] == report[(report.length - 1)]["score"]) {
                 log("Page is Done");
                 script_scorm.complet();
                 clearInterval(waitForComplet);
@@ -167,16 +168,36 @@ function log(text) {
     }
 }
 
+var currentScreen = 1;
+
+function initUndergroundControls() {
+    setInterval(() => {
+        let fpage = parseInt(document.querySelector('.info_page_counter').querySelector('span').innerHTML.slice(0, 1))
+        if (currentScreen != fpage) {
+            currentScreen = fpage;
+            console.log(`CS > ${currentScreen}`);
+            prepareScreen(currentScreen);
+        }
+    }, 100);
+}
+
+// Screen Functions
+
+function prepareScreen(page) {
+    switch (page) {
+    }
+}
+
 function insertLogo() {
     // CSS
     var logo_style = document.createElement('style');
     logo_style.type = 'text/css';
-    logo_style.innerHTML = ".emp_copyright-button{cursor: default;} .emp_copyright-button *{cursor: default;}";
+    logo_style.innerHTML = "#stand_logo img{border: none;cursor: default;background: transparent;position: absolute;left: 390px;top: -75px;width: 120px;}";
     document.getElementsByTagName('head')[0].appendChild(logo_style);
 }
 
 var report = [];
-const ignoreScreens = ['Content', 'Report', 'Credits', 'Lesson report', ''];
+const ignoreScreens = ['Content', 'Report', 'Credits', 'Lesson report', '', 'CREDITS'];
 
 function createReport() {
     report = [];
@@ -192,7 +213,7 @@ function createReport() {
             let ms = 0;
             let has = true;
 
-            notFix.includes(parseInt(index)) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done + x.result.errors);
+            notFix.includes(parseInt(index)) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done);
             ms = parseInt(x.result.todo);
             x.result.todo != 0 ? has = true : has = false;
             switch (x.title.substring(0, 4)) {
@@ -226,7 +247,6 @@ function createReport() {
         "maxScore": t_m,
         "hasScore": true,
     });
-    // console.log(report);
 }
 
 // Dicionario
