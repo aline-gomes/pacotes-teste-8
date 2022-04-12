@@ -12,9 +12,9 @@
 	</metadata>
 	<organizations default="EYC_L1U1_ORG_01">
 		<organization identifier="EYC_L1U1_ORG_01">
-			<title>I think he's very funny.</title>
+			<title>What’s your mother’s job?</title>
 			<item identifier="EYC_L1U1_ITEM_01" identifierref="EYC_L1U1_ORG_01_RES_01" isvisible="true">
-				<title>I think he's very funny.</title>
+				<title>What’s your mother’s job?</title>
 			</item>
 		</organization>
 	</organizations>

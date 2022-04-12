@@ -94,13 +94,8 @@
 			margin-top: -48px;
 		}
 
-		.report_frame iframe {
-			width: 100%;
-			height: 38rem !important;
-		}
-
-		.emp_report_content {
-			display: none !important;
+		.report-page tbody .qp-report-table-row-page-6 {
+			display: none;
 		}
 
 		/* .lesson-home-button-main,
@@ -111,87 +106,79 @@
 		canvas {
 			outline: none;
 		}
-
-		/* TELA DRAG */
-		.drag_piv.slist_horizontal .qp-sourcelist-item {
-			display: inline-flex;
-		}
 	</style>
 
 </head>
 
 <body onunload="script_scorm.end()">
 	<script src="js/pi.js"></script>
+	
+		<div id="player"></div>
+		<script>
+			var audio_call = 0;
+			var xaudio_stop = false;
+			var xaudio_sync = null;
+			var audio_holder = null;
 
-	<div id="player"></div>
-	<audio id="xaudio" src="./" type="audio/mp3"></audio>
-	<script>
-		var xaudio = document.querySelector("#xaudio");
-		var xaudio_id = 0;
-		var xaudio_stop = false;
-		var xaudio_src = '';
-		var xaudio_ct = 0;
-		var xaudio_sync = null;
+			function xplay(src, target) {
+				audio_call++;
+				let myid = audio_call;
 
-		function xplay(src, target) {
-			xaudio_stop = false;
-			xaudio_id++;
-			let myid = xaudio_id;
-			xaudio_src = '.' + src.toString().split('src=')[1].split(' type=')[0].split('course')[1].slice(0, -1);
-			xaudio_ct = target.currentTime;
-			// console.log(xaudio_src);
-			setTimeout(() => {
-				// console.log(`M: ${myid} N: ${xaudio_id}`);
-				if (myid == xaudio_id) {
-					// console.log("play");
-					xaudio.src = xaudio_src;
-					xaudio.currentTime = xaudio_ct;
-					xaudio.load();
-					xaudio.play();
-					target.play();
-
-					setTimeout(() => {
-						xaudio_stop = true;
+				setTimeout(() => {
+					// Controle de multiplas chamadas
+					if (myid == audio_call) {
+						// console.log("Iniciando Audio");
+						// Limpando audio
+						if (audio_holder != null) {
+							audio_holder.pause();
+							audio_holder == null;
+						}
 						if (xaudio_sync != null) {
 							clearInterval(xaudio_sync);
 							xaudio_sync = null;
-							// console.log("Cleaning xaudio")
 						}
+						// Criando novo
+						let new_audio = new Audio('.' + src.toString().split('src=')[1].split(' type=')[0].split('course')[1].slice(0, -1))
+						// Sincroniza se necessario
 						if (target.duration > 5) {
-							xaudio_sync = setInterval(() => {
-								if (parseInt(xaudio.currentTime) != parseInt(target.currentTime)) {
-									xaudio.currentTime = target.currentTime;
-								}
-							}, 250);
+							new_audio.currentTime = target.currentTime;
+							setTimeout(() => {
+								// Desbloqueia pause
+								audio_holder = new_audio;
+								xaudio_sync = setInterval(() => {
+									if (parseInt(audio_holder.currentTime) != parseInt(target.currentTime)) {
+										audio_holder.currentTime = target.currentTime;
+									}
+								}, 250);
+								xaudio_stop = true;
+							}, 200);
 						} else {
-							xaudio_sync = setInterval(() => {
-								// console.log(xaudio.currentTime);
-								if(xaudio.currentTime == 0){
-									xaudio.play();
-									target.currentTime = 0;
-								}
-								if (xaudio.currentTime > 0.5 && xaudio.currentTime < 1) {
-									target.currentTime = 0;
-								}
-							}, 250);
+							target.currentTime = 0;
+							new_audio.currentTime = 0
 						}
-					}, 200);
-				}
-			}, 200)
-		}
 
-		xaudio.addEventListener("pause", () => {
-			if(xaudio_stop){
-				xaudio_stop = false;
-				if (xaudio_sync != null) {
-					clearInterval(xaudio_sync);
-					xaudio_sync = null;
-					// console.log("Cleaning xaudio")
-				}
-				// console.log("Pausou");
+						new_audio.play();
+						target.play();
+
+						setTimeout(() => {
+							// Desbloqueia pause
+							audio_holder = new_audio;
+							xaudio_stop = true;
+						}, 200);
+					}
+				}, 200)
 			}
-		})
 
+			function xpause() {
+				if (xaudio_stop) {
+					xaudio_stop = false;
+					if (audio_holder != null) {
+						audio_holder.pause();
+						audio_holder == null;
+					}
+					// console.log("Pausou");
+				}
+			}
 	</script>
 
 	<img id="mainPreloader" src="runtime/rtempiria/player/preloader/preloader.gif">

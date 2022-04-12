@@ -2,7 +2,7 @@
 <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
   <general>
     <title>
-    <langstring xml:lang="en-US">I think he's very funny.</langstring>
+    <langstring xml:lang="en-US">What's your father's job?</langstring>
     </title>
     <catalogentry>
       <catalog />
