@@ -25,7 +25,7 @@ function getAbsoluteBase(useplayerinfoxml) {
 	if (useplayerinfoxml) {
 		if (_absoluteBasePlayerinfoXml===null) {
 			try {
-				var req = sendRequest('playerinfo.xml');
+				// var req = sendRequest('playerinfo.xml');
 				if (req.status==200) {
 					var nodes = req.responseXML.getElementsByTagName("contentBase");
 					if (nodes.length>0) {

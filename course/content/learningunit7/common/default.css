@@ -551,7 +551,7 @@ input[disabled] {
     vertical-align: middle;
 }
 .emp_link_button .emp_copyright-button{
-    background:url(btn_copyright.png) no-repeat;
+    background:url('') no-repeat;
     display: inline-block;
     width:35px;
     height:30px;

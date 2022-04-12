@@ -7,7 +7,7 @@ var timing = false;
 var txt_infos;
 var isLms = true;
 var report_data = "";
-const notFix = [4];
+const notFix = [3];
 
 function init() {
     // Wait
@@ -22,10 +22,9 @@ function init() {
                 isLms = false;
             }
             clearInterval(waitForLoad);
-            createReport();
+            insertLogo();
+            // createReport();
             initListners();
-            insertCSS();
-            initUndergroundControls();
             readXml("dictionary\\words.xml");
             dictionary();
         } else {
@@ -55,7 +54,7 @@ function initListners() {
     // Pontuação
     var waitForComplet = setInterval(function () {
         try {
-            if (report[(report.length - 1)]["maxScore"] == report[(report.length - 1)]["score"]) {
+            if (window.player.getScore() == window.player.getScoreMax()) {
                 log("Page is Done");
                 script_scorm.complet();
                 clearInterval(waitForComplet);
@@ -168,164 +167,16 @@ function log(text) {
     }
 }
 
-// NEW AUDIO FUNCTIONS
-
-function insertCSS() {
+function insertLogo() {
     // CSS
-    var post_css = document.createElement('style');
-    post_css.type = 'text/css';
-    post_css.innerHTML = " *.link-marg {margin-top: 54px !important} .emp_head_text_container{margin-top: 37px !important;}";
-    document.getElementsByTagName('head')[0].appendChild(post_css);
-}
-
-
-var currentScreen = 1;
-
-function initUndergroundControls() {
-    setInterval(() => {
-        let fpage = parseInt(document.querySelector('.info_page_counter').querySelector('span').innerHTML.slice(0, 1))
-        if (currentScreen != fpage) {
-            currentScreen = fpage;
-            console.log(`CS > ${currentScreen}`);
-            prepareScreen(currentScreen);
-        }
-    }, 100);
-
-    let audio_player = document.createElement('audio');
-    audio_player.id = "audio_player";
-    let body_pointer = document.querySelector('body');
-    body_pointer.appendChild(audio_player);
-}
-
-// AUDIO FUNC
-
-function playAudio(src) {
-    try {
-        let body_pointer = document.querySelector('body');
-        body_pointer.removeChild(document.querySelector("#audio_player"));
-        let audio_player = document.createElement('audio');
-        audio_player.id = "audio_player";
-        let audio_source = document.createElement('source');
-        audio_source.type = "audio/mp3";
-        audio_source.src = `audio/${src}.mp3`;
-        body_pointer.appendChild(audio_player);
-        audio_player.appendChild(audio_source);
-        audio_player.play();
-    } catch (err) {
-        console.log("Play Audio>>>", err)
-    }
-}
-
-
-function simpleAudioAss(btn_arr, words_arr, audio_arr) {
-    let buttons = document.querySelectorAll(btn_arr);
-    for (btn of buttons) {
-        for (let i = 0; i < words_arr.length; i++) {
-            if (btn.innerHTML == words_arr[i]) {
-                let audio = audio_arr[i];
-                btn.onclick = function (audio) {
-                    return function () {
-                        playAudio(audio);
-                    }
-                }(audio);
-            }
-        }
-    }
-}
-
-// Screen Functions
-
-function prepareScreen(page) {
-    switch (page) {
-        case 5:
-            // screen4Change();
-            break;
-        case 6:
-            // screen6Change();
-            break;
-    }
-}
-
-// SCREEN 4 CHANGE
-
-var screen4f = true;
-
-var audio_arr = [
-    "trilhas_V2_004_audio_ tela 5-7_001",
-    "trilhas_V2_004_audio_ tela 5-7_002",
-    "trilhas_V2_004_audio_ tela 5-7_003",
-    "trilhas_V2_004_audio_ tela 5-7_004",
-    "trilhas_V2_004_audio_ tela 5-7_005",
-]
-
-var btn_names4 = [
-    "tired",
-    "hungry",
-    "lunch",
-    "thirsty",
-    "salad",
-]
-
-function screen4Change() {
-    if (screen4f) {
-        simpleAudioAss('.gwt-Label', btn_names4, audio_arr);
-        screen4f = false;
-    }
-}
-
-
-// SCREEN 6 CHANGE
-
-var name_arr6 = [
-    "Yes, I am.",
-    "Are you hungry, Kim?",
-    "And I’m thirsty!",
-    "Kim? Are you tired?",
-    "I’m tired and I’m hungry!",
-]
-
-var audios_arr6 = [
-    "trilhas_V2_004_audio_ tela 6-7_001",
-    "trilhas_V2_004_audio_ tela 6-7_002",
-    "trilhas_V2_004_audio_ tela 6-7_003",
-    "trilhas_V2_004_audio_ tela 6-7_005",
-    "trilhas_V2_004_audio_ tela 6-7_006",
-]
-
-function screen6Change() {
-    var targets = [];
-    try {
-        document.querySelectorAll('iframe').forEach((item) => {
-            let piv_target = item.contentWindow.document.body.querySelectorAll('.source-list-element');
-            if (piv_target.length > 0) {
-                targets = piv_target;
-            }
-        })
-    } catch (err) {
-        console.log("ES6>>>", err);
-        setTimeout(() => { screen6Change() }, 100);
-    }
-    if (targets.length == 0) {
-        setTimeout(() => { screen6Change() }, 100);
-        return;
-    }
-    for (btn of targets) {
-        for (let i = 0; i < name_arr6.length; i++) {
-            if (btn.textContent == name_arr6[i]) {
-                let audio = audios_arr6[i]
-                btn.onclick = function (audio) {
-                    return function () {
-                        playAudio(audio);
-                    }
-                }(audio);
-            }
-        }
-        btn.style.cssText = "text-transform: uppercase !important;";
-    }
+    var logo_style = document.createElement('style');
+    logo_style.type = 'text/css';
+    logo_style.innerHTML = ".emp_copyright-button{cursor: default;} .emp_copyright-button *{cursor: default;}";
+    document.getElementsByTagName('head')[0].appendChild(logo_style);
 }
 
 var report = [];
-const ignoreScreens = ['Content', 'Report', 'Credits', 'Lesson report', '', 'CREDITS'];
+const ignoreScreens = ['Content', 'Report', 'Credits', 'Lesson report', ''];
 
 function createReport() {
     report = [];
@@ -341,7 +192,7 @@ function createReport() {
             let ms = 0;
             let has = true;
 
-            notFix.includes(parseInt(index)) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done);
+            notFix.includes(parseInt(index)) ? sc = parseInt(x.result.done) : sc = parseInt(x.result.done + x.result.errors);
             ms = parseInt(x.result.todo);
             x.result.todo != 0 ? has = true : has = false;
             switch (x.title.substring(0, 4)) {
@@ -375,6 +226,7 @@ function createReport() {
         "maxScore": t_m,
         "hasScore": true,
     });
+    // console.log(report);
 }
 
 // Dicionario

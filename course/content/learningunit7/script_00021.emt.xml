@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><assessmentTest compilerVersion="3.3.2.188" gtm="true" identifer="21 Who are they?" playerVersion="1.8.0" title="Who are they?">
+				
+		<testView href="common/lesson.emp.xml"/>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+	<general>
+		<keyword><string>mother</string></keyword>
+		<keyword><string>father</string></keyword>
+		<keyword><string>sister</string></keyword>
+		<keyword><string>brother</string></keyword>
+		<keyword><string>grandmother</string></keyword>
+		<keyword><string>grandfather</string></keyword>
+		<keyword><string>parents</string></keyword>
+		<keyword><string>grandparents</string></keyword>
+		<keyword><string>mum</string></keyword>
+		<keyword><string>dad</string></keyword>
+		<keyword><string>photo</string></keyword>
+		<keyword><string>who are they</string></keyword>
+		<keyword><string>daughter</string></keyword>
+		<keyword><string>son</string></keyword>
+		<keyword><string>cousin</string></keyword>
+		<keyword><string>granddaughter</string></keyword>
+		<keyword><string>grandson</string></keyword>
+		<title><string>Who are they?</string></title>
+	</general>
+	<metaMetadata>
+      <contribute>
+        <role>
+          <source>LOMv1.0</source>
+          <value>creator</value>
+        </role>
+        <entity>Marcin Zdziuch</entity>
+      </contribute>
+	</metaMetadata>
+	<educational>
+		<description><string>Learning goals:
+1. Describing a photo
+2. Recycling vocabulary: mother, father, sister, brother, grandmother, grandfather, parents, grandparents, mum, dad</string></description>
+	</educational>
+</lom>
+	<styleDeclaration>
+		<link href="common/default.css" userAgent=".*"/>
+	</styleDeclaration>
+	<variableProcessing template="default"/>
+
+	<outcomeDeclaration cardinality="single" identifier="DONE"/>
+	<outcomeDeclaration cardinality="single" identifier="TODO"/>
+	<outcomeDeclaration cardinality="single" identifier="CHECKS"/>
+	<outcomeDeclaration cardinality="single" identifier="SHOW_ANSWERS"/>
+	<outcomeDeclaration cardinality="single" identifier="RESET"/>
+	<outcomeDeclaration cardinality="single" identifier="MISTAKES"/>
+
+	<testPart>
+		<assessmentSection>
+			<assessmentItemRef class="toc_page" href="script_00021/script_00021_000.emp.xml" identifier="ITEM_000"/>
+			<assessmentItemRef class="media_page" href="script_00021/script_00021_001.emp.xml" identifier="ITEM_001"/>
+			<assessmentItemRef class="activity_page" href="script_00021/script_00021_002.emp.xml" identifier="ITEM_002"/>
+			<assessmentItemRef class="activity_page" href="script_00021/script_00021_003.emp.xml" identifier="ITEM_003"/>
+			<assessmentItemRef class="activity_nobtn_page" href="script_00021/script_00021_004.emp.xml" identifier="ITEM_004"/>
+			<assessmentItemRef class="l2g_page" href="script_00021/script_00021_005.emp.xml" identifier="ITEM_005"/>
+			<assessmentItemRef class="report_page" href="script_00021/script_00021_006.emp.xml" identifier="ITEM_006"/>
+			<assessmentItemRef class="report_page" href="./newassets/script_1.emp.xml" identifier="ITEM_007"/>
+		</assessmentSection>
+	</testPart>
+</assessmentTest>
